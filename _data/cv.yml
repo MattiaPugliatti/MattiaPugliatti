@@ -46,7 +46,7 @@
       institution: University of Arizona (UoA), Tucson, Arizona
       year: Sep. 2021 - Jan 2022
       description:
-        - Visiting researcher at the Space System Engineering Laboratory under the supervision of professor Roberto Furfaro.
+        - Visiting researcher under the supervision of professor Roberto Furfaro.
         - Deep-learning and convolutional extreme learning machine methods for precise optical navigation in the proximity of a small-body.
         - Recurrent neural networks and reinforcement learning for autonomous close-proximity operations.
     - title: GNC project engineer
@@ -56,3 +56,34 @@
         - GNC project engineer of the HERA mission, a technology demonstration mission to visit the Didymos binary system.
         - Design and testing of the visual based navigation strategy for the proximity operation phases of the Hera mission for phases A and B1.
         - Incremental testing and validation campaign using higher fidelity models. Model-in-the-loop (with PANGU), software-in-the-loop and hardware-in-the-loop (responsible for the optical facility testbench and robotic facility simulations).
+    - title: Visiting researcher
+      institution: ISAS/JAXA, Sagamihara, Japan
+      year: Mar. 2017 - Nov. 2017
+      description:
+        - Visiting researcher under the supervision of professor Yasuhiro Kawakatsu.
+        - Member of the trajectory design teams of EQUULEUS CubeSat and DESTINY smallsat missions. 
+    - title: Internship
+      institution: Airbus Defence and Space, Friedrichsafen, Germany
+      year: Jul. 2016 - Dec. 2016
+      description:
+        - Mission and spacecraft design of 𝑁𝐸𝑂𝑇𝜔𝐼𝑆𝑇, a low-cost impactor demonstration and characterization mission on Itokawa. Part of the NEOShield-2 project, supported by the European programme H2020.
+        - Focus on the flyby trajectory and formation flight design, high level assessment of a tracking strategy, and system engineering design of the flyby module.
+- title: Honors and Awards
+  type: time_table
+  contents:
+    - year: 2022
+      items: 
+        - Progetto Roberto Rocca
+        - Scholarship provided to fund 6-12 months of research stays at MIT for 5-6 Politecnico di Milano PhD students every year to increse cooperation between the two universities.
+    - year: 2016
+      items: 
+        - Erasmus+
+        - Grant provided with the aim to increase the mobility of students within the EU, sustaining them while experiencing other cultures
+    - year: 2012
+      items: 
+        - Excellence award
+        - Registration in the national record of Italian excellences after graduating with 100/100 'cum Laude' from Scientific and Technological high school Luigi Galvani
+- title: Other Interests
+  type: list
+  contents:
+    - <u>Hobbies:</u> Backpacking, cycling, tennis, and bouldering. 
