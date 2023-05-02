@@ -15,7 +15,7 @@
       institution: Politecnico di Milano, Milan, Italy
       year: Nov. 2019 - Present
       description:
-        - Artificial intelligence for enhanced optical navigation techniques around small-bodies. Design and validation of autonomous GNC systems for interplanetary CubeSats.
+        - Artificial intelligence for enhanced optical navigation techniques around small-bodies.
         - Mission analysis, image processing, and GNC design of the Milani mission. Team leader of the GNC group for the Milani mission.
         - Marie Skłodowska Curie ESR13 of Stardust-R, the European Training Network on asteroids and space debris.
     - title: M.Sc. in Spaceflight
@@ -24,7 +24,7 @@
       description:
         - Specialization in space exploration, transfer orbit profile.
         - key courses on Mission Geometry and Orbit design, Planetary sciences, Astrodynamics I & II, Space Project, Microsatellite engineering.
-        - Thesis on the Extended Tisserand–Poincaré graph for multi-body trajectory design in the patched CR3BP model. Framework extension of the Tisserand parameter about the primary to a modified Tisserand parameter about the secondary, existing on a specific family of Poincaré sections.
+        - Thesis on the Extended Tisserand–Poincaré graph for multi-body trajectory design in the patched CR3BP model.
         - Final grade of 9.5/10 Cum Laude. Manuscript available at TU Delft repository.
     - title: B.Sc. in Aerospace engineering
       institution: Politecnico di Milano, Milan, Italy
@@ -32,3 +32,27 @@
       description:
         - Key courses on Fundamental of Space Missions, Applied Numerical Analysis, Theoretical Mechanics, Automatic Control.
         - Final grade of 106/110.
+- title: Experience
+  type: time_table
+  contents:
+    - title: Visiting researcher
+      institution: Deutsches Forschungszentrum für Künstliche Intelligenz (DFKI), Bremen, Germany
+      year: Feb. 2023 - May 2023
+      description:
+        - Visiting researcher under the supervision of Dr. Marko Jankovic and Shubham Vyas.
+        - Visual digital twin of an analog crater facility for data-driven applications.
+        - Dataset generation with a Vicon-drone camera setup. Pose and visual labeling of the images with a digital twin.
+    - title: Visiting researcher
+      institution: University of Arizona (UoA), Tucson, Arizona
+      year: Sep. 2021 - Jan 2022
+      description:
+        - Visiting researcher at the Space System Engineering Laboratory under the supervision of professor Roberto Furfaro.
+        - Deep-learning and convolutional extreme learning machine methods for precise optical navigation in the proximity of a small-body.
+        - Recurrent neural networks and reinforcement learning for autonomous close-proximity operations.
+    - title: GNC project engineer
+      institution: GMV, Madrid, Spain
+      year: Sep. 2018 - Sep. 2019
+      description:
+        - GNC project engineer of the HERA mission, a technology demonstration mission to visit the Didymos binary system.
+        - Design and testing of the visual based navigation strategy for the proximity operation phases of the Hera mission for phases A and B1.
+        - Incremental testing and validation campaign using higher fidelity models. Model-in-the-loop (with PANGU), software-in-the-loop and hardware-in-the-loop (responsible for the optical facility testbench and robotic facility simulations).
