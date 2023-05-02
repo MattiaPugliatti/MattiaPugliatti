@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: <a href='#'>PhD Student and ESR</a>. Politecnico di Milano, DART group 
 
 profile:
   align: right
@@ -11,7 +11,7 @@ profile:
   address: >
     <p></p>
     <p></p>
-    <p>Milan, Italy</p>
+    <p></p>
 
 news: true  # includes a list of news items
 latest_posts: true  # includes a list of the newest posts
@@ -19,8 +19,10 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I am a curious, ambitious and creative researcher. My areas of interest are autonomous optical navigation, artificial intelligence, GNC, and small-bodies exploration. My career goal is to become a specialist in interplanetary
+missions and design of autonomous, optical-based systems.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+Since November 2019 I am a PhD student at the DART group, Politecnico di Milano, and Early Stage Researcher (ESR) of the H2020 StardustR Marie Skłodowska-Curie network on asteroids and space debris under the supervision of Prof. Francesco Topputo. My research has been focused on embedding data-driven image processing perception algorithms for autonomous navigation, segmentation, hazard detection, and shape recognition with small irregular celestial bodies such as comets and asteroids. 
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+I have always liked a good challenge. Over the year this mentality has brought me to different places around the world that have greatly enriched me both as a person and as a space engineer. I have contributed to CubeSat (Milani, EQUULEUS), smallsats (DESTINY+), and traditional (HERA) missions in desparate settings over the years: Bremen, Tucson, Madrid, Tokyo, Delft, Friedrichshafen, Milan.
+
