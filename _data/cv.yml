@@ -13,20 +13,31 @@
   contents:
     - title: PhD and Early Stage Researcher
       institution: Politecnico di Milano, Milan, Italy
-      year: 2023
+      year: Nov. 2019 - Present
       description:
-        - Description 1.
-        - Description 2.
+        - Artificial intelligence for enhanced optical navigation techniques around small-bodies. Design and validation of autonomous GNC systems for interplanetary CubeSats.
+        - Mission analysis, image processing, and GNC design of the Milani mission. Team leader of the GNC group for the Milani mission.
+        - Marie Skłodowska Curie ESR13 of Stardust-R, the European Training Network on asteroids and space debris.
+
+    - title: M.Sc. in Spaceflight
+      institution: Delft University of Technology Delft, The Netherlands
+      year: Sep. 2015 - Mar. 2018
+      description:
+        - Specialization in space exploration, transfer orbit profile.
+        - Key courses: Mission Geometry and Orbit design, Planetary sciences, Astrodynamics I & II, Space Project, Microsatellite engineering.
+        - Thesis on the Extended Tisserand–Poincaré graph for multi-body trajectory design in the patched CR3BP model: Extension of the current theoretical framework in the CR3BP of the Tisserand parameter about the primary to a modified Tisserand parameter about the secondary, existing on a specific family of Poincaré sections.
+        - Final grade: 9.5/10 Cum Laude. Manuscript available at TU Delft repository.
+
+    - title: B.Sc. in Aerospace engineering
+      institution: Delft University of Technology Delft, The Netherlands
+      year: Sep. 2012 - Sep. 2015
+      description:
+        - Key courses: Fundamental of Space Missions, Applied Numerical Analysis, Theoretical Mechanics, Automatic Control.
+        - Final grade: 106/110.
         - title: Description 3.
           contents:
             - Sub-description 1.
             - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
-      description:
-        - Description 1.
-        - Description 2.
 
 - title: Experience
   type: time_table
