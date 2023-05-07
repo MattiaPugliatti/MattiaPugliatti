@@ -3,189 +3,37 @@
 
 # Conferences
 
-@article{pugliatti2022small,
+%%%%%%%%%%% 2023 %%%%%%%%%%%
+
+@inproceedings{giordano2023Milani,
   bibtex_show={true},
-  title={Small-body segmentation based on morphological features with a u-shaped network architecture},
-  author={Pugliatti, Mattia and Maestrini, Michele},
-  journal={Journal of Spacecraft and Rockets},
-  volume={59},
-  number={6},
-  pages={1821--1835},
-  year={2022},
-  publisher={American Institute of Aeronautics and Astronautics},
-  preview={pugliatti2022small.png},
-  doi = {10.2514/1.A35447},
-  url = {https://doi.org/10.2514/1.A35447},
-  selected={true},
-  html={https://doi.org/10.2514/1.A35447},
-  abstract = {Small bodies such as asteroids and comets display great variability in terms of surface morphological features. These are often unknown beforehand but can be employed for hazard avoidance during landing, autonomous planning of scientific observations, and navigation purposes. Algorithms performing these tasks are often data driven, which means they require realistic, sizeable, and annotated datasets, which in turn may rely heavily on human intervention. This work develops a methodology to generate synthetic, automatically labeled datasets that are used in conjunction with real, manually labeled ones to train deep-learning architectures in the task of semantic segmentation. This functionality is achieved by designing U-shaped network architectures trained with different strategies. These show good generalization capabilities, implement uncertainty quantification estimates, and can be hybridized to exploit qualities from multiple networks.} 
+  title={The Hera Milani CubeSat mission},
+  author={C Giordano, F Topputo, F Ferrari, V Franzese, M Pugliatti, F Piccolo, A Rizza, T Kohout, F Dirri, A Longobardo, C Gisellu, E Palomba, M Cardi, F Perez-Lissi, P Martino, I Carnelli},
+  booktitle={5th COSPAR Symposium, 2023},
+  year={2023c},
+  month = {April},
+  html={https://re.public.polimi.it/bitstream/11311/1221311/1/RIZZA01-22.pdf},
+  abstract = {}
 }
 
-@article{pugliatti2022data,
+%%%%%%%%%%% 2022 %%%%%%%%%%%
+
+@inproceedings{rizza2022hardware,
   bibtex_show={true},
-  title={Data-driven image processing for onboard optical navigation around a binary asteroid},
-  author={Pugliatti, Mattia and Franzese, Vittorio and Topputo, Francesco},
-  journal={Journal of Spacecraft and Rockets},
-  volume={59},
-  number={3},
-  pages={943--959},
-  year={2022},
-  publisher={American Institute of Aeronautics and Astronautics},
-  preview={pugliatti2022data.png},
-  doi = {10.2514/1.A35213},
-  url = {https://doi.org/10.2514/1.A35213},
-  selected={true},
-  html={https://doi.org/10.2514/1.A35213},
-  abstract = {In this work data-driven image processing options for a CubeSat mission around a binary asteroid system are investigated. The methods considered belong to two main branches of image processing methods: centroid and artificial intelligence. The former is represented by three variations of centroiding methods, and the latter by three neural networks and one convolutional neural network. The first contribution of this work is an enhanced center of brightness method with a data-driven scattering law. This method is demonstrated to share similarities with neural networks in terms of both design and performance, with the advantage of relying on a traditional, robust, and fully explainable algorithm. The second contribution is given by the performance assessment between the different families of image processing methods. For this purpose, the Milani mission is considered as a case study: a 6U CubeSat that will visit the Didymos system as part of the Hera mission. From this analysis, it emerges that convolutional networks perform better than other methods across all metrics considered. This hints to the importance of filtering techniques to extract spatial information from images, which is a unique feature of the convolutional approach over the other image processing methods considered.}
+  title={Hardware-In-the-loop Simulation Framework for CubeSats Proximity Operations: Application to the Milani Mission},
+  author={Rizza, Antonio and Piccolo, Felice and Pugliatti, Mattia and Panicucci, Paolo and Topputo, Francesco},
+  booktitle={73rd International Astronautical Congress (IAC 2022)},
+  pages={1--15},
+  year={2022c},
+  month = {October},
+  html={https://re.public.polimi.it/bitstream/11311/1221311/1/RIZZA01-22.pdf},
+  abstract = { Milani is a 6U CubeSat that will be released by Hera in proximity of the Didymos binary asteroid. The spacecraft will demonstrate autonomous Guidance Navigation and Control (GNC) capability for CubeSats in deep space, enhancing the scientific outcome of the mission. The Deep-space Astrodynamics Research and Technology (DART) Group at Politecnico di Milano is responsible for Milani Mission Analysis (MA), GNC and Image Processing (IP) design. Operations in proximity of minor bodies demand high levels of autonomy to achieve cost-effective, safe, and reliable solutions. The on-board software has a central role in these applications, thus it must be extensively tested and validated to satisfy mission requirements and to guarantee robustness to uncertainties. A robust and standardized methodology to design, validate, and test vision-based Attitude and Orbit Control Systems (AOCS) algorithms is fundamental to achieve fast prototyping while facing at the same time limited availability of resources and time. This paper presents a modular and flexible approach, developed at DART lab, to test GNC algorithms with camera- and processor-in-the-loop simulations. This framework is characterized by three elements: 1) a functional engineering simulator for six-degrees-of-freedom closed-loop analyses, 2) a vision-based navigation test-bench for camera-in-the-loop simulations, and 3) a single-board computer to test the algorithm in a representative computational environment. The first element is the modular CUBesat ORbit and GNC (CUBORG) tool, developed in MATLAB/Simulink. This contains a high-fidelity model of the environment suitable for simulating different operative scenarios, and a prototype of the spacecraft AOCS. Camera-in-the loop simulations are performed thanks to the in-house developed Tiny Versatile 3D Reality Simulation Environment (TinyV3RSE). This is composed of a high-resolution screen which displays synthetic images as they would be acquired from the probe during the mission, and stimulates, through a collimator, the camera mounted in the facility. The third element is a Raspberry Pi which is selected as external board to run processor-in-the-loop simulations. The proposed approach is tested on the Milani case simulating the GNC and IP subsystems in a real-hardware environment, doing a step forward towards the hardware-in-the-loop validation and verification of them.}
 }
 
-@article{ferrari2021preliminary,
-  bibtex_show={true},
-  title={Preliminary mission profile of Hera’s Milani CubeSat},
-  author={Ferrari, Fabio and Franzese, Vittorio and Pugliatti, Mattia and Giordano, Carmine and Topputo, Francesco},
-  journal={Advances in Space Research},
-  volume={67},
-  number={6},
-  pages={2010--2029},
-  year={2021},
-  publisher={Elsevier},
-  preview={ferrari2021preliminary.png},
-  doi = {10.1016/j.asr.2020.12.034},
-  url = {https://doi.org/10.1016/j.asr.2020.12.034},
-  selected = {true}, 
-  html={https://doi.org/10.1016/j.asr.2020.12.034},
-  abstract = {CubeSats offer a flexible and low-cost option to increase the scientific and technological return of small-body exploration missions. ESA’s Hera mission, the European component of the Asteroid Impact and Deflection Assessment (AIDA) international collaboration, plans on deploying two CubeSats in the proximity of binary system 65803 Didymos, after arrival in 2027. In this work, we discuss the feasibility and preliminary mission profile of Hera’s Milani CubeSat. The CubeSat mission is designed to achieve both scientific and technological objectives. We identify the design challenges and discuss design criteria to find suitable solutions in terms of mission analysis, operational trajectories, and Guidance, Navigation, & Control (GNC) design. We present initial trajectories and GNC baseline, as a result of trade-off analyses. We assess the feasibility of the Milani CubeSat mission and provide a preliminary solution to cover the operational mission profile of Milani in the close-proximity of Didymos system.}
-}
-
-@article{ferrari2021trajectory,
-  bibtex_show={true},
-  title={Trajectory options for Hera’s Milani cubesat around (65803) Didymos},
-  author={Ferrari, Fabio and Franzese, Vittorio and Pugliatti, Mattia and Giordano, Carmine and Topputo, Francesco},
-  journal={The Journal of the Astronautical Sciences},
-  volume={68},
-  number={4},
-  pages={973--994},
-  year={2021},
-  publisher={Springer},
-  preview={ferrari2021trajectory.png},
-  doi = {10.1007/s40295-021-00282-z},
-  url = {https://doi.org/10.1007/s40295-021-00282-z},
-  html={https://doi.org/10.1007/s40295-021-00282-z},
-  abstract = {The dynamical environment in the close-proximity of small celestial bodies is characterized by a very weak and irregular gravity field. In this low-acceleration deep-space environment, small dynamical perturbations might affect significantly the dynamics of a spacecraft hovering near the surface of such objects. This poses a challenge to the efficient design of trajectories of space probes for space missions aimed at the exploration of small Solar System bodies. This applies especially to CubeSats, small spacecraft with limited autonomy and maneuvering capabilities. In this case, a careful and efficient design of the operational trajectory is mandatory to accomplish the objective of the mission. As a representative and timely case study, we investigate the dynamics around binary asteroid (65803) Didymos, the target of NASA’s Double Asteroid Redirection Test (DART) and ESA’s Hera missions. We analyze all the relevant dynamical contributions concurring to the acceleration environment near Didymos and provide a subdivision of it into subregions, each identified by a different dynamical regime. With reference to the Hera Milani CubeSat mission scenario, we describe the methodology and design approach to find trajectories in the dayside of Didymos system. Finally, we provide examples of suitable trajectory options to host the operational phase of the Hera Milani CubeSat.}
-}
-
-@article{penarroya2022CubeSat,
-  bibtex_show={true},
-  title = {CubeSat landing simulations on small bodies using blender},
-  journal = {Advances in Space Research},
-  year = {2022},
-  issn = {0273-1177},
-  doi = {10.1016/j.asr.2022.07.044},
-  url = {https://www.sciencedirect.com/science/article/pii/S0273117722006676},
-  author = {Pelayo Peñarroya and Mattia Pugliatti and Fabio Ferrari and Simone Centuori and Francesco Topputo and Massimo Vetrisano and Manuel Sanjurjo-Rivo},
-  keywords = {Landing, Blender, Contact dynamics, Asteroid, Safety map},
-  preview={penarroya2022CubeSat.png},
-  html={https://www.sciencedirect.com/science/article/pii/S0273117722006676},
-  abstract = {Landing on small-bodies is a very challenging problem that requires high degrees of robustness and autonomy. Being able to perform simulations with great flexibility and accuracy is paramount for the development and design of landing systems. To this end, contact dynamics plays a fundamental role and is often handled by complex tools that require large amount of development and validation efforts and very specific expertise. In the last decade, the Visual Effects (VFX) industry has developed numerous suites that deal with contact dynamics frameworks. In this work, the possibility of leveraging on the work of the VFX industry by using Blender, one of these tools, as the source for the contact dynamics modelling is investigated. This research focuses on the description of the methodology used for the landing simulations and the validation of the tool developed. A step-by-step guide through the simulation setup is given, discussing how the wrapping GNC simulator and Blender interact. Validation tests for the different parameters and dynamic models involved in the simulations are also presented. The results refer to the landing of a CubeSat in the crater region of an asteroid. In particular, the artificial crater that will be generated on Dimorphos by NASA’s DART impact in late September 2022, is considered in the simulations presented in this work. Safety maps are generated by post-processing these results, and are used to assess different landing strategies or site-selection criteria on the Dimorphos crater study case. Finally, the role of the developed tool in optimising the use of space resources and its contribution to landing design strategies is discussed.}
-}
-
-@article{Buonagura2022image,
-  bibtex_show={true},
-  doi = {10.1007/s40295-022-00348-6},
-  url = {https://doi.org/10.1007/s40295-022-00348-6},
-  year = {2022},
-  month = nov,
-  publisher = {Springer Science and Business Media {LLC}},
-  volume = {69},
-  number = {6},
-  pages = {1744--1765},
-  author = {Carmine Buonagura and Mattia Pugliatti and Francesco Topputo},
-  title = {Image Processing Robustness Assessment of Small-Body Shapes},
-  journal = {The Journal of the Astronautical Sciences},
-  preview={Buonagura2022image.png},
-  html={https://doi.org/10.1007/s40295-022-00348-6},
-  abstract = {Asteroids and comets are triggering interest due to the richness of precious materials, their scientifc value as well as for their potential hazardousness. Owing to their signifcant diversity, minor bodies do not exhibit uniform shapes: they can range from spherical to irregularly shaped objects with rocky, uneven, and cratered surface. Nowadays, space probes rely more and more on optical navigation techniques, due to the increasing demand for autonomy. When dealing with minor bodies, the diversifed range of shapes can signifcantly afect the performance of these techniques. In order to enable deep space probes to confdently deal with uncertainties, the need for robust image processing methods arises. Commonly, few image processing methods are designed and tested with limited shapes to meet mission requirements. In this work, we depart from this paradigm by developing a new framework, which includes extensive testing of the image processing algorithms with various shapes. The shapes are not randomly analyzed, yet they are arranged in a hierarchical structure called hyper-cube. The cube allows for a better understanding of the methods performance and to infer the way they shift from one shape to the other. The novelty of this approach lies both in the cube representation, which allows a better understanding of the link between the image processing algorithms and shape of the object, but also in the extensive number of shapes that have been tested, which has never been done before. In this analysis, four methods are considered, namely: center of brightness, intensity weighted centroiding, correlation with Lambertian spheres, and least-squares-based ellipse ftting. Results from this test allow us correlating the methods performances to the bodies shape, to suggest the best performing method for each shape family, and to assess their robustness.}
-}
+%%%%%%%%%%% 2021 %%%%%%%%%%%
 
 
-@string{aps = {American Physical Society,}}
+%%%%%%%%%%% 2020 %%%%%%%%%%%
 
-@book{einstein1956investigations,
-  bibtex_show={true},
-  title={Investigations on the Theory of the Brownian Movement},
-  author={Einstein, Albert},
-  year={1956},
-  publisher={Courier Corporation},
-  preview={brownian-motion.gif}
-}
+%%%%%%%%%%% 2016 %%%%%%%%%%%
 
-@article{einstein1950meaning,
-  abbr={AJP},
-  bibtex_show={true},
-  title={The meaning of relativity},
-  author={Einstein, Albert and Taub, AH},
-  journal={American Journal of Physics},
-  volume={18},
-  number={6},
-  pages={403--404},
-  year={1950},
-  publisher={American Association of Physics Teachers}
-}
-
-@article{PhysRev.47.777,
-  abbr={PhysRev},
-  title={Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
-  author={Einstein, A. and Podolsky, B. and Rosen, N.},
-  abstract={In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
-  journal={Phys. Rev.},
-  volume={47},
-  issue={10},
-  pages={777--780},
-  numpages={0},
-  year={1935},
-  month={May},
-  publisher=aps,
-  doi={10.1103/PhysRev.47.777},
-  url={http://link.aps.org/doi/10.1103/PhysRev.47.777},
-  html={https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf={example_pdf.pdf},
-  altmetric={248277},
-  dimensions={true},
-  selected={false}
-}
-
-@article{einstein1905molekularkinetischen,
-  title={{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
-  author={Einstein, A.},
-  journal={Annalen der physik},
-  volume={322},
-  number={8},
-  pages={549--560},
-  year={1905},
-  publisher={Wiley Online Library}
-}
-
-@article{einstein1905movement,
-  abbr={Ann. Phys.},
-  title={Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
-  author={Einstein, A.},
-  journal={Ann. Phys.},
-  volume={17},
-  pages={549--560},
-  year={1905}
-}
-
-@article{einstein1905electrodynamics,
-  title={On the electrodynamics of moving bodies},
-  author={Einstein, A.},
-  year={1905}
-}
-
-@book{przibram1967letters,
-  bibtex_show={true},
-  title={Letters on wave mechanics},
-  author={Einstein, Albert and Schrödinger, Erwin and Planck, Max and Lorentz, Hendrik Antoon and Przibram, Karl},
-  year={1967},
-  publisher={Vision},
-  preview={wave-mechanics.gif}
-}
