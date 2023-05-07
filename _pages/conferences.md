@@ -13,8 +13,7 @@ nav_order: 2
 
 {%- for y in page.years %}
   <h2 class="year">{{y}}</h2>
-  {% bibliography -f {{ site.scholar.bibliography }} -q @conference and @*[year={{y}}]* %}
+  {% bibliography -f {{ site.scholar.bibliography }} -q @inproceedings and @*[year={{y}}]* %}
 {% endfor %}
 
 </div>
-
