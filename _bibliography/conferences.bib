@@ -12,11 +12,24 @@
   booktitle={5th COSPAR Symposium, 2023},
   year={2023},
   month = {April},
-  html={https://re.public.polimi.it/bitstream/11311/1221311/1/RIZZA01-22.pdf},
+  pdf={https://hdl.handle.net/11573/1672600},
   abstract = {}
 }
 
 %%%%%%%%%%% 2022 %%%%%%%%%%%
+
+@inproceedings{pugliatti2022boulders,
+  bibtex_show={true},
+  title={Boulders identification on small bodies under varying illumination conditions},
+  author={Mattia Pugliatti and Francesco Topputo},
+  booktitle={Space Imaging Workshop},
+  pages={1--12},
+  year={2022},
+  month = {October},
+  pdf={https://arxiv.org/pdf/2210.16283.pdf},
+  code = {https://zenodo.org/record/7107409#.ZF5GS-xBxQI},
+  abstract = {The capability to detect boulders on the surface of small bodies is beneficial for vision-based applications such as navigation and hazard detection during critical operations. This task is challenging due to the wide assortment of irregular shapes, the characteristics of the boulders population, and the rapid variability in the illumination conditions. The authors address this challenge by designing a multi-step training approach to develop a data-driven image processing pipeline to robustly detect and segment boulders scattered over the surface of a small body. Due to the limited availability of labeled image-mask pairs, the developed methodology is supported by two artificial environments designed in Blender specifically for this work. These are used to generate a large amount of synthetic image-label sets, which are made publicly available to the image processing community. The methodology presented addresses the challenges of varying illumination conditions, irregular shapes, fast training time, extensive exploration of the architecture design space, and domain gap between synthetic and real images from previously flown missions. The performance of the developed image processing pipeline is tested both on synthetic and real images, exhibiting good performances, and high generalization capabilities.}
+}
 
 @inproceedings{rizza2022hardware,
   bibtex_show={true},
@@ -26,7 +39,7 @@
   pages={1--15},
   year={2022},
   month = {October},
-  html={https://re.public.polimi.it/bitstream/11311/1221311/1/RIZZA01-22.pdf},
+  pdf={https://re.public.polimi.it/bitstream/11311/1221311/1/RIZZA01-22.pdf},
   abstract = { Milani is a 6U CubeSat that will be released by Hera in proximity of the Didymos binary asteroid. The spacecraft will demonstrate autonomous Guidance Navigation and Control (GNC) capability for CubeSats in deep space, enhancing the scientific outcome of the mission. The Deep-space Astrodynamics Research and Technology (DART) Group at Politecnico di Milano is responsible for Milani Mission Analysis (MA), GNC and Image Processing (IP) design. Operations in proximity of minor bodies demand high levels of autonomy to achieve cost-effective, safe, and reliable solutions. The on-board software has a central role in these applications, thus it must be extensively tested and validated to satisfy mission requirements and to guarantee robustness to uncertainties. A robust and standardized methodology to design, validate, and test vision-based Attitude and Orbit Control Systems (AOCS) algorithms is fundamental to achieve fast prototyping while facing at the same time limited availability of resources and time. This paper presents a modular and flexible approach, developed at DART lab, to test GNC algorithms with camera- and processor-in-the-loop simulations. This framework is characterized by three elements: 1) a functional engineering simulator for six-degrees-of-freedom closed-loop analyses, 2) a vision-based navigation test-bench for camera-in-the-loop simulations, and 3) a single-board computer to test the algorithm in a representative computational environment. The first element is the modular CUBesat ORbit and GNC (CUBORG) tool, developed in MATLAB/Simulink. This contains a high-fidelity model of the environment suitable for simulating different operative scenarios, and a prototype of the spacecraft AOCS. Camera-in-the loop simulations are performed thanks to the in-house developed Tiny Versatile 3D Reality Simulation Environment (TinyV3RSE). This is composed of a high-resolution screen which displays synthetic images as they would be acquired from the probe during the mission, and stimulates, through a collimator, the camera mounted in the facility. The third element is a Raspberry Pi which is selected as external board to run processor-in-the-loop simulations. The proposed approach is tested on the Milani case simulating the GNC and IP subsystems in a real-hardware environment, doing a step forward towards the hardware-in-the-loop validation and verification of them.}
 }
 
@@ -35,5 +48,19 @@
 
 %%%%%%%%%%% 2020 %%%%%%%%%%%
 
+@inproceedings{pugliatti2020shape,
+  bibtex_show={true},
+  title={Small-body shape recognition with convolutional neural network and comparison with explicit features based method},
+  author={Mattia Pugliatti and Francesco Topputo},
+  booktitle={Advances in the astronautical sciences},
+  year={2020},
+  month = {August},
+  volume = {175},
+  pages = {2539--2258},
+  published = {Univelt}
+  pdf={https://www.researchgate.net/profile/Mattia-Pugliatti/publication/344042457_Small-Body_shape_recognition_with_Convolutional_Neural_Network_and_comparison_with_explicit_features_based_methods/links/5f4f5e51299bf13a31970da7/Small-Body-shape-recognition-with-Convolutional-Neural-Network-and-comparison-with-explicit-features-based-methods.pdf},
+  abstract = {Small-bodies such as asteroids and comets exhibit a wide variety of shapes and surface characteristics that are often unknown beforehand. Because of that, traditional exploration approaches do not make use of shape information on-board the spacecraft. This work would like to propose an approach based on Convolutional Neural Networks (CNN) to provide such type of information for on-board image processing and compare it with three more traditional approaches based on explicit image features such as Hu invariant moments, Fourier descriptors and polar outlines. A group of 8 different small-body shapes is chosen as archetype set and a database of images is generated to train these 4 techniques in the classification task. Their performances are then analyzed in three different scenarios. First, they are analyzed on the test set split from the database. In the second one the CNN is used to classify the shape of new objects that are not part of the archetype set. Lastly, all techniques are used under varying illumination conditions on some models from the archetype set. The CNN classifier outperforms the other methods, reaching an accuracy of 98.52%, meaningful classification on new models and a robust behaviour under varying illumination conditions. The latter property can be used for efficient training of the CNN with a smaller database. Given the promising results, the CNN classifier is proposed for onboard implementation to provide shape information. Other important results of this work are the identification of an irregularity index for small-bodies and the definition of a shape profile as a fingerprint of the 3D object under varying perspective.},
+  slides = {TBD}
+}
 %%%%%%%%%%% 2016 %%%%%%%%%%%
 
