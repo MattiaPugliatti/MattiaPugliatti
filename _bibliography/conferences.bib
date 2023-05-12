@@ -44,6 +44,7 @@
 }
 
 @inproceedings{pugliatti2022board,
+  bibtex_show={true},
   title={On-board Small-Body Semantic Segmentation Based on Morphological Features with U-Net},
   author={Pugliatti, Mattia and Maestrini, Michele and Di Lizia, Pierluigi and Topputo, Francesco and others},
   booktitle={Advances in the Astronautical Sciences},
@@ -70,10 +71,20 @@
   abstract = {Optical navigation about small-bodies can be performed at different scales and with different techniques during proximity operations. Traditional methods however are influenced by pixel intensity due to illumination conditions and often provide a navigation solution only when coupled with filtering techniques. In this work, a navigation method for small-body applications is presented that makes use of segmentation maps. By converting a grayscale image into its segmented equivalent the pixel content is highly reduced but at the same time its meaning is enriched since the pixel value is providing direct information on feature type and distribution across space. This is exploited in an autonomous navigation method in two steps. A Convolutional Neural Network is designed to generate a rough estimate of the position of a spacecraft in a small-body fixed reference frame, whose surrounding has been divided into 1176 classes. A Normalized Cross-Correlation technique is then applied to the reduced search space to generate a precise position estimate. The methodology proposed is trained and validated on a database of segmented synthetic maps of 49716 samples of Didymos and Hartley each, while a series of 5 scenarios are tested. The CNN is capable to predict the correct class with an accuracy of $75.94\%$ and $68.60\%$ respectively for Didymos and Hartley, while the overwhelming majority of the other cases are predicted just next to the correct classes. The CNN is robust to various illumination conditions, is capable to work outside the range of distances considered during training, performs well when predicted masks are used, and also selects independently the type of features to rely on for classification depending on the body. When coupled with NCC, a position estimate with a relative error below $5-8\%$ the range from the asteroid can be achieved.}
 }
 
+@inproceedings{pugliatti2022design,
+  bibtex_show={true},
+  title={Design of the on-board image processing of the Milani mission},
+  author={ and others},
+  booktitle={44th AAS Guidance, Navigation and Control Conference},
+  pages={1--21},
+  year={2022},
+  pdf = {https://www.researchgate.net/publication/363539056_Design_of_the_On-Board_Image_Processing_of_the_Milani_Mission},
+  slides = {TBD},
+  abstract = {Milani is a 6U CubeSat that will visit the Didymos binary system as part of the Hera mission. Its objectives are both scientific and technological: to study and characterize the asteroid environment, and to demonstrate the use of CubeSat technologies for interplanetary missions. The latter includes optical-based autonomous navigation algorithms in a close-proximity environment, which are enabled by robust image processing functions. In this work, for the first time, the design of the image processing of Milani is described in detail. Its algorithmic core is divided among two blocks: the blobs characterization and the observables extraction. The former one extracts low-level optical observables while distinguishing the primary from the secondary of the Didymos system. The latter processes the input of the previous block to generate higher-level observables such as the center of figure, the range, and the phase angle. These estimates are generated thanks to data-driven functions which are tuned on a global dataset representative of the geometric conditions which Milani would encounter during its mission. After a detailed description of its functionalities, the image processing is tested on two datasets representative of the nominal mission phases: the far range phase and the close range phase. After the characterization of the various algorithms, it is demonstrated that Milani’s image processing is capable of robustly generating a set of optical observables to be used on-board by the GNC and the rest of the CubeSat.}
+}
+}
+
 %%%%%%%%%%% 2021 %%%%%%%%%%%
-
-
-%%%%%%%%%%% 2020 %%%%%%%%%%%
 
 @inproceedings{pugliatti2021shape,
   bibtex_show={true},
@@ -89,6 +100,9 @@
   abstract = {Small-bodies such as asteroids and comets exhibit a wide variety of shapes and surface characteristics that are often unknown beforehand. Because of that, traditional exploration approaches do not make use of shape information on-board the spacecraft. This work would like to propose an approach based on Convolutional Neural Networks (CNN) to provide such type of information for on-board image processing and compare it with three more traditional approaches based on explicit image features such as Hu invariant moments, Fourier descriptors and polar outlines. A group of 8 different small-body shapes is chosen as archetype set and a database of images is generated to train these 4 techniques in the classification task. Their performances are then analyzed in three different scenarios. First, they are analyzed on the test set split from the database. In the second one the CNN is used to classify the shape of new objects that are not part of the archetype set. Lastly, all techniques are used under varying illumination conditions on some models from the archetype set. The CNN classifier outperforms the other methods, reaching an accuracy of 98.52%, meaningful classification on new models and a robust behaviour under varying illumination conditions. The latter property can be used for efficient training of the CNN with a smaller database. Given the promising results, the CNN classifier is proposed for onboard implementation to provide shape information. Other important results of this work are the identification of an irregularity index for small-bodies and the definition of a shape profile as a fingerprint of the 3D object under varying perspective.},
   slides = {TBD}
 }
+
+%%%%%%%%%%% 2020 %%%%%%%%%%%
+
 
 %%%%%%%%%%% 2016 %%%%%%%%%%%
 
