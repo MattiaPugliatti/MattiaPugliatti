@@ -78,7 +78,7 @@
 @inproceedings{pugliatti2022design,
   bibtex_show={true},
   title={Design of the on-board image processing of the Milani mission},
-  author={ and others},
+  author={Mattia Pugliatti, Vittorio Franzese, Antonio Rizza, Felice Piccolo, Claudio Bottiglieri, Carmine Giordano, Fabio Ferrari, Francesco Topputo},
   booktitle={44th AAS Guidance, Navigation and Control Conference},
   pages={1--21},
   year={2022},
@@ -87,6 +87,17 @@
   preview = {pugliatti2022design.png},
   abstract = {Milani is a 6U CubeSat that will visit the Didymos binary system as part of the Hera mission. Its objectives are both scientific and technological: to study and characterize the asteroid environment, and to demonstrate the use of CubeSat technologies for interplanetary missions. The latter includes optical-based autonomous navigation algorithms in a close-proximity environment, which are enabled by robust image processing functions. In this work, for the first time, the design of the image processing of Milani is described in detail. Its algorithmic core is divided among two blocks: the blobs characterization and the observables extraction. The former one extracts low-level optical observables while distinguishing the primary from the secondary of the Didymos system. The latter processes the input of the previous block to generate higher-level observables such as the center of figure, the range, and the phase angle. These estimates are generated thanks to data-driven functions which are tuned on a global dataset representative of the geometric conditions which Milani would encounter during its mission. After a detailed description of its functionalities, the image processing is tested on two datasets representative of the nominal mission phases: the far range phase and the close range phase. After the characterization of the various algorithms, it is demonstrated that Milani’s image processing is capable of robustly generating a set of optical observables to be used on-board by the GNC and the rest of the CubeSat.}
 }
+
+@inproceedings{piccolo2022toward,
+  bibtex_show={true},
+  title={Toward verification and validation of the Milani Image Processing pipeline in the hardware-in-the-loop testbench TinyV3RSE},
+  author={Piccolo, Felice and Pugliatti, Mattia and Panicucci, Paolo and Topputo, Francesco},
+  booktitle={44th AAS Guidance, Navigation and Control Conference},
+  pages={1--21},
+  year={2022},
+  pdf = {https://re.public.polimi.it/bitstream/11311/1199155/1/PICCF01-22.pdf},
+  preview = {piccolo2022toward.png},
+  abstract = {Verification and validation is an essential step for image processing and vision based navigation algorithms. Typically these algorithms are designed mainly with synthetic images, which implies a urgent need to study their behaviour under realistic environmental conditions. To achieve this task, DART Lab has designed the hardware-in-the-loop testbench TinyV3RSE, which can be used both to support fundamental research and to increase the maturity of mission-specific algorithms. Among its projects, DART Lab is responsible for the mission analysis and the GNC subsystem of Milani, one of the two CubeSats of ESA’s Hera mission. A crucial component of its semi-autonomous vision-based GNC subsystem is the image processing, which, to this date, has been designed and tested only with synthetic images. In this work the weighted center of brightness algorithm, an essential part of Milani’s image processing, is tested using TinyV3RSE. In particular, the robustness of the algorithm to challenging geometrical conditions, different exposure times, and blur levels is investigated. The results allowed to prove the robustness of the algorithm and to gather insight into the effect of camera hardware on the image processing software: a preliminary but essential step towards the full validation and verification of Milani’s image processing.}
 }
 
 %%%%%%%%%%% 2021 %%%%%%%%%%%
