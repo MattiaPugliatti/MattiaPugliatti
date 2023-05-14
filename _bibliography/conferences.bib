@@ -8,12 +8,13 @@
 @inproceedings{giordano2023Milani,
   bibtex_show={true},
   title={The Hera Milani CubeSat mission},
-  author={C Giordano, F Topputo, F Ferrari, V Franzese, M Pugliatti, F Piccolo, A Rizza, T Kohout, F Dirri, A Longobardo, C Gisellu, E Palomba, M Cardi, F Perez-Lissi, P Martino, I Carnelli},
+  author={Giordano, Carmine and Ferrari, Fabio and Franzese, Vittorio and Pugliatti, Mattia and Piccolo, Felice and Rizza, Antonio and Kohout, Thomas and Dirri, Fabrizio and Longobardo, A and Gisellu C and Palomba, Ernesto and Cardi, Margherita and Perez-Lissi, Franco and Martino, Paolo and Carnelli, Ian},
   booktitle={5th COSPAR Symposium, 2023},
   year={2023},
   month = {April},
   pdf={https://hdl.handle.net/11573/1672600},
-  abstract = {}
+  abstract = {},
+  preview = {giordano2023Milani.png}
 }
 
 %%%%%%%%%%% 2022 %%%%%%%%%%%
@@ -29,6 +30,7 @@
   pdf={https://arxiv.org/pdf/2210.16283.pdf},
   dataset = {https://zenodo.org/record/7107409#.ZF5GS-xBxQI},
   preview = {pugliatti2022boulders.png},
+  slides = {https://drive.google.com/file/d/16O2vdbk0YcA4AImRMhH4wp96vp9nqEGC/view?usp=share_link},
   abstract = {The capability to detect boulders on the surface of small bodies is beneficial for vision-based applications such as navigation and hazard detection during critical operations. This task is challenging due to the wide assortment of irregular shapes, the characteristics of the boulders population, and the rapid variability in the illumination conditions. The authors address this challenge by designing a multi-step training approach to develop a data-driven image processing pipeline to robustly detect and segment boulders scattered over the surface of a small body. Due to the limited availability of labeled image-mask pairs, the developed methodology is supported by two artificial environments designed in Blender specifically for this work. These are used to generate a large amount of synthetic image-label sets, which are made publicly available to the image processing community. The methodology presented addresses the challenges of varying illumination conditions, irregular shapes, fast training time, extensive exploration of the architecture design space, and domain gap between synthetic and real images from previously flown missions. The performance of the developed image processing pipeline is tested both on synthetic and real images, exhibiting good performances, and high generalization capabilities.}
 }
 
@@ -57,7 +59,7 @@
   pdf = {https://www.researchgate.net/publication/349140381_Onboard_Small-Body_semantic_segmentation_based_on_morphological_features_with_U-Net},
   preview = {pugliatti2022board.png},
   abstract = {Small-bodies such as asteroids and comets exhibit great variability in surface morphological features. These are often unknown beforehand but can be exploited for hazard avoidance during landing, autonomous planning of scientific observations, and for navigation purposes. The detection and classification of such features is a laborious task that requires extensive manual work done by experts in the field. This step renders online usage of images unfeasible for these applications. Such limitation could be overcome thanks to the recent advances in the field of neural networks, which allow to recognize features automatically from an acquired image. However, to train such networks, an annotated dataset needs to be generated with care by field experts, thus requiring once again extensive work and human-in-the-loop. In this work, a methodology that exploits an open-source rendering software, ray-tracing masking, and simple image processing techniques is illustrated, which allows to automatize the segmentation process and build up a robust database of labeled features (i.e. background, surface, craters, boulders, and the terminator region) for small-bodies. A procedural code is designed to generate images and their labels over 7 different small-body shapes for a total of $12,550$ images that are used to train a Convolutional Neural Network with a U-Net architecture in the task of semantic segmentation. The performances of the network are then analyzed in 4 different scenarios. First, the network is evaluated on a test set composed of $1,050$ new images belonging to bodies seen during training. Secondly, the network is evaluated on $3,000$ synthetic images from 2 models that have not been encountered in training. Afterward, one of these latter models is tested in a flyby trajectory scenario consisting of $56$ images. The results of the first three tests show state of the art performances and the capability of this method to generalize features across synthetic data. Finally, the network's performances are qualitatively assessed with a set of $59$ real images from previously flown missions, highlighting the current limits of this approach. These shortcomings suggest possible directions for future improvement, which are discussed in this work.},
-  slides = {TBD}
+  slides = {https://drive.google.com/file/d/1TJIFtpVnbmlEFwAxAWUfhCu7snf64Aq7/view?usp=share_link}
 }
 
 @inproceedings{pugliatti2022navigation,
@@ -70,7 +72,7 @@
   year={2022},
   publisher={Univelt},
   pdf = {https://www.researchgate.net/publication/349140716_Navigation_about_irregular_bodies_through_segmentation_maps},
-  slides = {TBD},
+  slides = {https://drive.google.com/file/d/1rcZY4c6AEEWGZHw3X7pyiEXbaPwl8heN/view?usp=share_link},
   preview = {pugliatti2022navigation.png},
   abstract = {Optical navigation about small-bodies can be performed at different scales and with different techniques during proximity operations. Traditional methods however are influenced by pixel intensity due to illumination conditions and often provide a navigation solution only when coupled with filtering techniques. In this work, a navigation method for small-body applications is presented that makes use of segmentation maps. By converting a grayscale image into its segmented equivalent the pixel content is highly reduced but at the same time its meaning is enriched since the pixel value is providing direct information on feature type and distribution across space. This is exploited in an autonomous navigation method in two steps. A Convolutional Neural Network is designed to generate a rough estimate of the position of a spacecraft in a small-body fixed reference frame, whose surrounding has been divided into 1176 classes. A Normalized Cross-Correlation technique is then applied to the reduced search space to generate a precise position estimate. The methodology proposed is trained and validated on a database of segmented synthetic maps of 49716 samples of Didymos and Hartley each, while a series of 5 scenarios are tested. The CNN is capable to predict the correct class with an accuracy of $75.94\%$ and $68.60\%$ respectively for Didymos and Hartley, while the overwhelming majority of the other cases are predicted just next to the correct classes. The CNN is robust to various illumination conditions, is capable to work outside the range of distances considered during training, performs well when predicted masks are used, and also selects independently the type of features to rely on for classification depending on the body. When coupled with NCC, a position estimate with a relative error below $5-8\%$ the range from the asteroid can be achieved.}
 }
@@ -83,7 +85,7 @@
   pages={1--21},
   year={2022},
   pdf = {https://www.researchgate.net/publication/363539056_Design_of_the_On-Board_Image_Processing_of_the_Milani_Mission},
-  slides = {TBD},
+  slides = {https://drive.google.com/file/d/1OlRPoviosTl60z1V_z8V894WXjRTHWGT/view?usp=sharing},
   preview = {pugliatti2022design.png},
   abstract = {Milani is a 6U CubeSat that will visit the Didymos binary system as part of the Hera mission. Its objectives are both scientific and technological: to study and characterize the asteroid environment, and to demonstrate the use of CubeSat technologies for interplanetary missions. The latter includes optical-based autonomous navigation algorithms in a close-proximity environment, which are enabled by robust image processing functions. In this work, for the first time, the design of the image processing of Milani is described in detail. Its algorithmic core is divided among two blocks: the blobs characterization and the observables extraction. The former one extracts low-level optical observables while distinguishing the primary from the secondary of the Didymos system. The latter processes the input of the previous block to generate higher-level observables such as the center of figure, the range, and the phase angle. These estimates are generated thanks to data-driven functions which are tuned on a global dataset representative of the geometric conditions which Milani would encounter during its mission. After a detailed description of its functionalities, the image processing is tested on two datasets representative of the nominal mission phases: the far range phase and the close range phase. After the characterization of the various algorithms, it is demonstrated that Milani’s image processing is capable of robustly generating a set of optical observables to be used on-board by the GNC and the rest of the CubeSat.}
 }
@@ -127,7 +129,7 @@
   pdf = {https://www.researchgate.net/publication/344042457_Small-Body_shape_recognition_with_Convolutional_Neural_Network_and_comparison_with_explicit_features_based_methods},
   preview = {pugliatti2021shape.png},
   abstract = {Small-bodies such as asteroids and comets exhibit a wide variety of shapes and surface characteristics that are often unknown beforehand. Because of that, traditional exploration approaches do not make use of shape information on-board the spacecraft. This work would like to propose an approach based on Convolutional Neural Networks (CNN) to provide such type of information for on-board image processing and compare it with three more traditional approaches based on explicit image features such as Hu invariant moments, Fourier descriptors and polar outlines. A group of 8 different small-body shapes is chosen as archetype set and a database of images is generated to train these 4 techniques in the classification task. Their performances are then analyzed in three different scenarios. First, they are analyzed on the test set split from the database. In the second one the CNN is used to classify the shape of new objects that are not part of the archetype set. Lastly, all techniques are used under varying illumination conditions on some models from the archetype set. The CNN classifier outperforms the other methods, reaching an accuracy of 98.52%, meaningful classification on new models and a robust behaviour under varying illumination conditions. The latter property can be used for efficient training of the CNN with a smaller database. Given the promising results, the CNN classifier is proposed for onboard implementation to provide shape information. Other important results of this work are the identification of an irregularity index for small-bodies and the definition of a shape profile as a fingerprint of the 3D object under varying perspective.},
-  slides = {TBD}
+  slides = {https://drive.google.com/file/d/1OCkDCmLHFHLs8nklH7XT-2rdVOk_wFjX/view?usp=share_link}
 }
 
 %%%%%%%%%%% 2017 %%%%%%%%%%%
