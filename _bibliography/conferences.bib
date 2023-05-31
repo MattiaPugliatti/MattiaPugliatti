@@ -34,6 +34,34 @@
   abstract = {The capability to detect boulders on the surface of small bodies is beneficial for vision-based applications such as navigation and hazard detection during critical operations. This task is challenging due to the wide assortment of irregular shapes, the characteristics of the boulders population, and the rapid variability in the illumination conditions. The authors address this challenge by designing a multi-step training approach to develop a data-driven image processing pipeline to robustly detect and segment boulders scattered over the surface of a small body. Due to the limited availability of labeled image-mask pairs, the developed methodology is supported by two artificial environments designed in Blender specifically for this work. These are used to generate a large amount of synthetic image-label sets, which are made publicly available to the image processing community. The methodology presented addresses the challenges of varying illumination conditions, irregular shapes, fast training time, extensive exploration of the architecture design space, and domain gap between synthetic and real images from previously flown missions. The performance of the developed image processing pipeline is tested both on synthetic and real images, exhibiting good performances, and high generalization capabilities.}
 }
 
+@inproceedings{pugliatti2022enhanced,
+  bibtex_show={true},
+  title={Enhanced Vision-Based Algorithms about Small Bodies: Lessons learned from the Stardust-R experience},
+  author={Pugliatti, Mattia and Topputo, Francesco},
+  booktitle={2nd International Stardust conference, STARCON2},
+  volume={1},
+  pages={1--2},
+  year={2022},
+  pdf = {https://indico.cern.ch/event/1158038/contributions/5112175/attachments/2537703/4367862/_SFC__Enhanced_Vision_Based_Navigation_Algorithms_about_Small_Bodies_Pugliatti.pdf},
+  preview = {pugliatti2022enhanced.PNG},
+  slides = {https://drive.google.com/file/d/1iQK4w74AZE3ZQPL2Q_TWmr3eM8ca5eue/view?usp=drive_link},
+  abstract = {In this work, the author collects lessons learned and future challenges identified in the field of enhanced vision-based navigation algorithms. These points are collected after 3 years of research experience within the H2020 Stardust-R network and pose points of discussion for future trends within the space community}
+}
+
+@inproceedings{pugliatti2022pipeline,
+  bibtex_show={true},
+  title={Enhanced Vision-Based Algorithms about Small Bodies: Lessons learned from the Stardust-R experience},
+  author={Mattia Pugliatti and Fabio Ferrari and Felice Piccolo and Antonio Rizza and Claudio Bottiglieri and Vittorio Franzese and Carmine Giordano and Francesco Topputo},
+  booktitle={2nd International Stardust conference, STARCON2},
+  volume={1},
+  pages={1--2},
+  year={2022},
+  pdf = {https://indico.cern.ch/event/1158038/contributions/5112204/attachments/2537705/4367864/MilaniPipelinesPaper_Pugliatti.pdf},
+  preview = {pugliatti2022pipeline.PNG},
+  slides = {https://drive.google.com/file/d/1_P_VfzzCyfHCDYuk94kOaPzrekc_aKqI/view?usp=drive_link},
+  abstract = {In this work, we present an overview of the design pipeline adopted for the Milan mission. The pipeline is presented as a generalized methodology that can be used to design any close-proximity mission about a small body. Its key elements are also addressed for the specific case of the Milani mission in relation to the changes that will need to be addressed following the updates from the DART mission.}
+}
+
 @inproceedings{rizza2022hardware,
   bibtex_show={true},
   title={Hardware-In-the-loop Simulation Framework for CubeSats Proximity Operations: Application to the Milani Mission},
@@ -45,6 +73,49 @@
   pdf={https://re.public.polimi.it/bitstream/11311/1221311/1/RIZZA01-22.pdf},
   preview = {rizza2022hardware.png},
   abstract = { Milani is a 6U CubeSat that will be released by Hera in proximity of the Didymos binary asteroid. The spacecraft will demonstrate autonomous Guidance Navigation and Control (GNC) capability for CubeSats in deep space, enhancing the scientific outcome of the mission. The Deep-space Astrodynamics Research and Technology (DART) Group at Politecnico di Milano is responsible for Milani Mission Analysis (MA), GNC and Image Processing (IP) design. Operations in proximity of minor bodies demand high levels of autonomy to achieve cost-effective, safe, and reliable solutions. The on-board software has a central role in these applications, thus it must be extensively tested and validated to satisfy mission requirements and to guarantee robustness to uncertainties. A robust and standardized methodology to design, validate, and test vision-based Attitude and Orbit Control Systems (AOCS) algorithms is fundamental to achieve fast prototyping while facing at the same time limited availability of resources and time. This paper presents a modular and flexible approach, developed at DART lab, to test GNC algorithms with camera- and processor-in-the-loop simulations. This framework is characterized by three elements: 1) a functional engineering simulator for six-degrees-of-freedom closed-loop analyses, 2) a vision-based navigation test-bench for camera-in-the-loop simulations, and 3) a single-board computer to test the algorithm in a representative computational environment. The first element is the modular CUBesat ORbit and GNC (CUBORG) tool, developed in MATLAB/Simulink. This contains a high-fidelity model of the environment suitable for simulating different operative scenarios, and a prototype of the spacecraft AOCS. Camera-in-the loop simulations are performed thanks to the in-house developed Tiny Versatile 3D Reality Simulation Environment (TinyV3RSE). This is composed of a high-resolution screen which displays synthetic images as they would be acquired from the probe during the mission, and stimulates, through a collimator, the camera mounted in the facility. The third element is a Raspberry Pi which is selected as external board to run processor-in-the-loop simulations. The proposed approach is tested on the Milani case simulating the GNC and IP subsystems in a real-hardware environment, doing a step forward towards the hardware-in-the-loop validation and verification of them.}
+}
+
+@inproceedings{pugliatti2022object,
+  bibtex_show={true},
+  title={Object Recognition Algorithms for the Didymos Binary System},
+  author={Mattia Pugliatti and Felice Piccolo and Francesco Topputo},
+  booktitle={2nd International Conference on Applied Intelligence and Informatics},
+  volume={2},
+  pages={1--20},
+  year={2022},
+  publisher={AII},
+  pdf = {https://re.public.polimi.it/handle/11311/1220710},
+  preview = {pugliatti2022object.PNG},
+  slides = {https://drive.google.com/file/d/1Puo4uZ5IAFuQbbOwPy8WOCNsHZGJH3ja/view?usp=drive_link},
+  abstract = {Optical-based navigation in a binary system such as the Didymos one poses new challenges in terms of image processing capabilities, in particular for what concerns the recognition between the primary and secondary bodies. In this work, the baseline object recognition algorithm used in the Milani mission to distinguish between Didymos and Dimorphos is evaluated against alternative image processing pipelines which use convolutional pooling architectures and machine learning approaches. The tasks of the proposed alternatives is to detect the secondary in the image and to define a bounding box around it. It is shown that these algorithms are capable of robustly predicting the presence of the secondary albeit performing poorly at predicting the components of the bounding box, which is a task that is performed quite robustly by the baseline algorithm. A new paradigm is therefore proposed which merges the strengths of both approaches into a unique pipeline that could be implemented on-board Milani.}
+}
+
+@inproceedings{buonagura2022deep,
+  bibtex_show={true},
+  title={Deep Learning for Navigation of Small Satellites About Asteroids: an Introduction to the Deepnav Project},
+  author={Carmine Buonagura and Mattia Pugliatti and Vittorio Franzese and Francesco Topputo and Aurel Zeqaj and Marco Zannoni and Mattia Varile and Ilaria Bloise and Federico Fontana and Francesco Rossi and Lorenzo Feruglio and Mauro Cardone},
+  booktitle={2nd International Conference on Applied Intelligence and Informatics},
+  volume={2},
+  pages={1--20},
+  year={2022},
+  publisher={AII},
+  pdf = {https://re.public.polimi.it/handle/11311/1220709},
+  preview = {buonagura2022deep.PNG},
+  abstract = {CubeSats represent the new frontier of space exploration, as they provide cost savings in terms of production and launch opportunities by being able to be launched as opportunity payloads. In addition, interest in minor bodies is gradually increasing because of the richness and exploitability of the materials present throughout their surface, the scientific return they could yield, and their dangerousness. Moreover, they are characterized by a highly harsh environment. These are the reasons why greater autonomous capabilities are desirable for future space missions. Optical navigation is one of the most promising technique for retrieving spacecraft state, enabling navigation autonomy. Unfortunately, most of these methods cannot be implemented on-board because of their computational burden. This paper presents the “Deep Learning for Navigation of Small Satellites about Asteroids” project, in short “DeepNav”, whose aim is to change the current navigation paradigm by exploiting artificial intelligence algorithms for on-board optical navigation. As a result, DeepNav will evaluate the performance of fast and light artificial intelligence-based orbit determination for the proximity operations phase around asteroids. }
+}
+
+@inproceedings{bottiglieri2022trajectory,
+  bibtex_show={true},
+  title={Trajectory design and orbit determination of Hera’s Milani CubeSat},
+  author={Claudio Bottiglieri and Felice Piccolo and Antonio Rizza and Carmine Giordano and Mattia Pugliatti and Vittorio Franzese and Fabio Ferrari and Francesco Topputo},
+  booktitle={Advances in the Astronautical Sciences},
+  volume={177},
+  pages={81--82},
+  year={2022},
+  publisher={Univelt},
+  pdf = {https://re.public.polimi.it/handle/11311/1186942},
+  preview = {bottiglieri2022trajectory.PNG},
+  abstract = {Hera is the European contribution to the ESA-NASA collaboration AIDA. During the mission, two CubeSats will be released in proximity of the binary asteroid 65803-Didymos: Milani and Juventas. In this work, some challenging aspects of the mission analysis of Milani are presented. Original trajectory design solutions are devised as a response to demanding scientific and operational requirements in a low-gravity environment. Then, a navigation strategy based on a combination of radiometric and optical measurements is presented and results of the knowledge analysis are shown for the main phases of the mission.}
 }
 
 @inproceedings{pugliatti2022board,
@@ -75,6 +146,30 @@
   slides = {https://drive.google.com/file/d/1rcZY4c6AEEWGZHw3X7pyiEXbaPwl8heN/view?usp=share_link},
   preview = {pugliatti2022navigation.png},
   abstract = {Optical navigation about small-bodies can be performed at different scales and with different techniques during proximity operations. Traditional methods however are influenced by pixel intensity due to illumination conditions and often provide a navigation solution only when coupled with filtering techniques. In this work, a navigation method for small-body applications is presented that makes use of segmentation maps. By converting a grayscale image into its segmented equivalent the pixel content is highly reduced but at the same time its meaning is enriched since the pixel value is providing direct information on feature type and distribution across space. This is exploited in an autonomous navigation method in two steps. A Convolutional Neural Network is designed to generate a rough estimate of the position of a spacecraft in a small-body fixed reference frame, whose surrounding has been divided into 1176 classes. A Normalized Cross-Correlation technique is then applied to the reduced search space to generate a precise position estimate. The methodology proposed is trained and validated on a database of segmented synthetic maps of 49716 samples of Didymos and Hartley each, while a series of 5 scenarios are tested. The CNN is capable to predict the correct class with an accuracy of $75.94\%$ and $68.60\%$ respectively for Didymos and Hartley, while the overwhelming majority of the other cases are predicted just next to the correct classes. The CNN is robust to various illumination conditions, is capable to work outside the range of distances considered during training, performs well when predicted masks are used, and also selects independently the type of features to rely on for classification depending on the body. When coupled with NCC, a position estimate with a relative error below $5-8\%$ the range from the asteroid can be achieved.}
+}
+
+@inproceedings{bottiglieri2022mission,
+  bibtex_show = {true},
+  title={Mission analysis and navigation assessment for hera’s milani cubesat},
+  author={Claudio Bottiglieri and Felice Piccolo and Antonio Rizza and Mattia Pugliatti and Vittorio Franzese and Carmine Giordano and Fabio Ferrari and Francesco Topptuo},
+  booktitle={4S Symposium},
+  pages={1--20},
+  year={2022},
+  preview = {bottiglieri2022mission.PNG},
+  pdf = {https://re.public.polimi.it/retrieve/e0c31c12-eb06-4599-e053-1705fe0aef77/BOTTC01-22.pdf},
+  abstract = {Hera is the European contribution to the ESA-NASA collaboration AIDA. During the mission, two CubeSats will be released in proximity of the binary asteroid 65803-Didymos: Milani and Juventas. In this work, an updated overview about the Milani mission analysis and navigation assessment are presented. The mission profile and the trajectories are shown. Then, a navigation assessment is presented, and the results are shown for the main phases of the mission.}
+}
+
+@inproceedings{buonagura2022procedural,
+  bibtex_show = {true},
+  title = {Procedural Minor Body Generator Tool for Data-Driven Optical Navigation Methods},
+  author = {Buonagura, Carmine and Pugliatti, Mattia and Topputo, Francesco},
+  booktitle = {6th CEAS Specialist Conference on Guidance, Navigation and Control-EuroGNC},
+  year = {2022},
+  month = {may},
+  preview = {buonagura2022procedural.png},
+  pdf = {https://re.public.polimi.it/bitstream/11311/1216510/1/BUONC01-22.pdf},
+  abstract = {Minor bodies show great variability in shape and surface morphological features. Since in the proximity of these bodies the dynamic is highly non-linear, communication windows with Earth could not be sufficient to navigate around them. Moreover, there is a growing demand for the reduction of costs deriving from ground-stations operations. As a result, the need for spacecraft with autonomous navigation capabilities both in far and close ranges. The most promising navigation technique is the optical one which allows the estimation of state information by exploiting optical observables extracted from images. To assess the robustness of optical navigation methods, it is required to perform tests on a variety of body shapes and with different surface morphological features. The importance of these tests arises from the shape and surface morphology estimation errors of ground-based estimation techniques. In this work, a procedural minor body generator tool implemented with an open-source 3D computer graphics software is described. The starting point of the tool is the three–dimensional mesh of a generic minor body which is procedurally modified by introducing craters, boulders, and surface roughness to obtain a photorealistic model in a real-looking environment. Two families of models can be generated by default: rocky ones, characterized by a large number of different-sized boulders, and cometary ones characterized by the typical morphology of comets, consisting of alternating rough and smooth regions, with the presence of small boulders.}
 }
 
 @inproceedings{pugliatti2022design,
@@ -114,18 +209,6 @@
   abstract = {Image processing and vision-based navigation algorithms require images for design, testing, and validation. For space exploration purposes, it is complex if not impossible to retrieve realistic images. To mitigate this, two approaches can be used: high-fidelity rendering of celestial bodies or hardware-in-the-loop testing. In this work, we focus on the latter by elaborating on the design, implementation, validation, and calibration of a vision-based navigation test bench called TinyV3RSE. The design of such facility has been a collaborative effort at the Deep-space Astrodynamics Research & Technology (DART) group, which will benefit from its usage in various projects and missions in which is involved. In this work the facility design, the current calibration procedure, and also some preliminary results are presented. These are focused on the image processing in a small-body mission and on the performance of an optical navigation algorithm about the Moon.}
 }
 
-@inproceedings{buonagura2022procedural,
-  bibtex_show = {true},
-  title = {Procedural Minor Body Generator Tool for Data-Driven Optical Navigation Methods},
-  author = {Buonagura, Carmine and Pugliatti, Mattia and Topputo, Francesco},
-  booktitle = {6th CEAS Specialist Conference on Guidance, Navigation and Control-EuroGNC},
-  year = {2022},
-  month = {may},
-  preview = {buonagura2022procedural.png},
-  pdf = {https://re.public.polimi.it/bitstream/11311/1216510/1/BUONC01-22.pdf},
-  abstract = {Minor bodies show great variability in shape and surface morphological features. Since in the proximity of these bodies the dynamic is highly non-linear, communication windows with Earth could not be sufficient to navigate around them. Moreover, there is a growing demand for the reduction of costs deriving from ground-stations operations. As a result, the need for spacecraft with autonomous navigation capabilities both in far and close ranges. The most promising navigation technique is the optical one which allows the estimation of state information by exploiting optical observables extracted from images. To assess the robustness of optical navigation methods, it is required to perform tests on a variety of body shapes and with different surface morphological features. The importance of these tests arises from the shape and surface morphology estimation errors of ground-based estimation techniques. In this work, a procedural minor body generator tool implemented with an open-source 3D computer graphics software is described. The starting point of the tool is the three–dimensional mesh of a generic minor body which is procedurally modified by introducing craters, boulders, and surface roughness to obtain a photorealistic model in a real-looking environment. Two families of models can be generated by default: rocky ones, characterized by a large number of different-sized boulders, and cometary ones characterized by the typical morphology of comets, consisting of alternating rough and smooth regions, with the presence of small boulders.}
-}
-
 @inproceedings{pugliatti2022tinyv3rse,
   bibtex_show = {true},
   title={TINYV3RSE: The DART Vision-Based Navigation Test-bench},
@@ -154,90 +237,23 @@
   abstract = {Milani is a 6U CubeSat that will be part of the Hera mission around the Didymos binary system. Its objectives are both scientific and technological: to study and characterize the Didymos environment, and to demonstrate the use of CubeSat technologies for interplanetary missions. The latter includes the usage of autonomous navigation algorithms in a close-proximity environment. The purpose of this work is twofold. First, to provide an updated overview of the Milani mission. Second, for the first time, to illustrate the architecture and some preliminary results of the semi-autonomous optical-based GNC system.}
 }
 
-@inproceedings{bottiglieri2022trajectory,
-  bibtex_show={true},
-  title={Trajectory design and orbit determination of Hera’s Milani CubeSat},
-  author={Claudio Bottiglieri and Felice Piccolo and Antonio Rizza and Carmine Giordano and Mattia Pugliatti and Vittorio Franzese and Fabio Ferrari and Francesco Topputo},
-  booktitle={Advances in the Astronautical Sciences},
-  volume={177},
-  pages={81--82},
-  year={2022},
-  publisher={Univelt},
-  pdf = {https://re.public.polimi.it/handle/11311/1186942},
-  preview = {bottiglieri2022trajectory.PNG},
-  abstract = {Hera is the European contribution to the ESA-NASA collaboration AIDA. During the mission, two CubeSats will be released in proximity of the binary asteroid 65803-Didymos: Milani and Juventas. In this work, some challenging aspects of the mission analysis of Milani are presented. Original trajectory design solutions are devised as a response to demanding scientific and operational requirements in a low-gravity environment. Then, a navigation strategy based on a combination of radiometric and optical measurements is presented and results of the knowledge analysis are shown for the main phases of the mission.}
-}
-
-@inproceedings{pugliatti2022object,
-  bibtex_show={true},
-  title={Object Recognition Algorithms for the Didymos Binary System},
-  author={Mattia Pugliatti and Felice Piccolo and Francesco Topputo},
-  booktitle={2nd International Conference on Applied Intelligence and Informatics},
-  volume={2},
-  pages={1--20},
-  year={2022},
-  publisher={AII},
-  pdf = {https://re.public.polimi.it/handle/11311/1220710},
-  preview = {pugliatti2022object.PNG},
-  slides = {https://drive.google.com/file/d/1Puo4uZ5IAFuQbbOwPy8WOCNsHZGJH3ja/view?usp=drive_link},
-  abstract = {Optical-based navigation in a binary system such as the Didymos one poses new challenges in terms of image processing capabilities, in particular for what concerns the recognition between the primary and secondary bodies. In this work, the baseline object recognition algorithm used in the Milani mission to distinguish between Didymos and Dimorphos is evaluated against alternative image processing pipelines which use convolutional pooling architectures and machine learning approaches. The tasks of the proposed alternatives is to detect the secondary in the image and to define a bounding box around it. It is shown that these algorithms are capable of robustly predicting the presence of the secondary albeit performing poorly at predicting the components of the bounding box, which is a task that is performed quite robustly by the baseline algorithm. A new paradigm is therefore proposed which merges the strengths of both approaches into a unique pipeline that could be implemented on-board Milani.}
-}
-
-@inproceedings{buonagura2022deep,
-  bibtex_show={true},
-  title={Deep Learning for Navigation of Small Satellites About Asteroids: an Introduction to the Deepnav Project},
-  author={Carmine Buonagura and Mattia Pugliatti and Vittorio Franzese and Francesco Topputo and Aurel Zeqaj and Marco Zannoni and Mattia Varile and Ilaria Bloise and Federico Fontana and Francesco Rossi and Lorenzo Feruglio and Mauro Cardone},
-  booktitle={2nd International Conference on Applied Intelligence and Informatics},
-  volume={2},
-  pages={1--20},
-  year={2022},
-  publisher={AII},
-  pdf = {https://re.public.polimi.it/handle/11311/1220709},
-  preview = {buonagura2022deep.PNG},
-  abstract = {CubeSats represent the new frontier of space exploration, as they provide cost savings in terms of production and launch opportunities by being able to be launched as opportunity payloads. In addition, interest in minor bodies is gradually increasing because of the richness and exploitability of the materials present throughout their surface, the scientific return they could yield, and their dangerousness. Moreover, they are characterized by a highly harsh environment. These are the reasons why greater autonomous capabilities are desirable for future space missions. Optical navigation is one of the most promising technique for retrieving spacecraft state, enabling navigation autonomy. Unfortunately, most of these methods cannot be implemented on-board because of their computational burden. This paper presents the “Deep Learning for Navigation of Small Satellites about Asteroids” project, in short “DeepNav”, whose aim is to change the current navigation paradigm by exploiting artificial intelligence algorithms for on-board optical navigation. As a result, DeepNav will evaluate the performance of fast and light artificial intelligence-based orbit determination for the proximity operations phase around asteroids. }
-}
-
-@inproceedings{pugliatti2022enhanced,
-  bibtex_show={true},
-  title={Enhanced Vision-Based Algorithms about Small Bodies: Lessons learned from the Stardust-R experience},
-  author={Pugliatti, Mattia and Topputo, Francesco},
-  booktitle={2nd International Stardust conference, STARCON2},
-  volume={1},
-  pages={1--2},
-  year={2022},
-  pdf = {https://indico.cern.ch/event/1158038/contributions/5112175/attachments/2537703/4367862/_SFC__Enhanced_Vision_Based_Navigation_Algorithms_about_Small_Bodies_Pugliatti.pdf},
-  preview = {pugliatti2022enhanced.PNG},
-  slides = {https://drive.google.com/file/d/1iQK4w74AZE3ZQPL2Q_TWmr3eM8ca5eue/view?usp=drive_link},
-  abstract = {In this work, the author collects lessons learned and future challenges identified in the field of enhanced vision-based navigation algorithms. These points are collected after 3 years of research experience within the H2020 Stardust-R network and pose points of discussion for future trends within the space community}
-}
-
-@inproceedings{pugliatti2022pipeline,
-  bibtex_show={true},
-  title={Enhanced Vision-Based Algorithms about Small Bodies: Lessons learned from the Stardust-R experience},
-  author={Mattia Pugliatti and Fabio Ferrari and Felice Piccolo and Antonio Rizza and Claudio Bottiglieri and Vittorio Franzese and Carmine Giordano and Francesco Topputo},
-  booktitle={2nd International Stardust conference, STARCON2},
-  volume={1},
-  pages={1--2},
-  year={2022},
-  pdf = {https://indico.cern.ch/event/1158038/contributions/5112204/attachments/2537705/4367864/MilaniPipelinesPaper_Pugliatti.pdf},
-  preview = {pugliatti2022pipeline.PNG},
-  slides = {https://drive.google.com/file/d/1_P_VfzzCyfHCDYuk94kOaPzrekc_aKqI/view?usp=drive_link},
-  abstract = {In this work, we present an overview of the design pipeline adopted for the Milan mission. The pipeline is presented as a generalized methodology that can be used to design any close-proximity mission about a small body. Its key elements are also addressed for the specific case of the Milani mission in relation to the changes that will need to be addressed following the updates from the DART mission.}
-}
-
-@inproceedings{bottiglieri2022mission,
-  bibtex_show = {true},
-  title={Mission analysis and navigation assessment for hera’s milani cubesat},
-  author={Claudio Bottiglieri and Felice Piccolo and Antonio Rizza and Mattia Pugliatti and Vittorio Franzese and Carmine Giordano and Fabio Ferrari and Francesco Topptuo},
-  booktitle={4S Symposium},
-  pages={1--20},
-  year={2022},
-  preview = {bottiglieri2022mission.png},
-  pdf = {https://re.public.polimi.it/retrieve/e0c31c12-eb06-4599-e053-1705fe0aef77/BOTTC01-22.pdf},
-  abstract = {Hera is the European contribution to the ESA-NASA collaboration AIDA. During the mission, two CubeSats will be released in proximity of the binary asteroid 65803-Didymos: Milani and Juventas. In this work, an updated overview about the Milani mission analysis and navigation assessment are presented. The mission profile and the trajectories are shown. Then, a navigation assessment is presented, and the results are shown for the main phases of the mission.}
-}
-
 %%%%%%%%%%% 2021 %%%%%%%%%%%
+
+@inproceedings{pugliatti2021shape,
+  bibtex_show={true},
+  title={Small-body shape recognition with convolutional neural network and comparison with explicit features based method},
+  author={Mattia Pugliatti and Francesco Topputo},
+  booktitle={Advances in the astronautical sciences},
+  year={2021},
+  month = {August},
+  volume = {175},
+  pages = {2539--2258},
+  publisher = {Univelt},
+  pdf = {https://www.researchgate.net/publication/344042457_Small-Body_shape_recognition_with_Convolutional_Neural_Network_and_comparison_with_explicit_features_based_methods},
+  preview = {pugliatti2021shape.png},
+  abstract = {Small-bodies such as asteroids and comets exhibit a wide variety of shapes and surface characteristics that are often unknown beforehand. Because of that, traditional exploration approaches do not make use of shape information on-board the spacecraft. This work would like to propose an approach based on Convolutional Neural Networks (CNN) to provide such type of information for on-board image processing and compare it with three more traditional approaches based on explicit image features such as Hu invariant moments, Fourier descriptors and polar outlines. A group of 8 different small-body shapes is chosen as archetype set and a database of images is generated to train these 4 techniques in the classification task. Their performances are then analyzed in three different scenarios. First, they are analyzed on the test set split from the database. In the second one the CNN is used to classify the shape of new objects that are not part of the archetype set. Lastly, all techniques are used under varying illumination conditions on some models from the archetype set. The CNN classifier outperforms the other methods, reaching an accuracy of 98.52%, meaningful classification on new models and a robust behaviour under varying illumination conditions. The latter property can be used for efficient training of the CNN with a smaller database. Given the promising results, the CNN classifier is proposed for onboard implementation to provide shape information. Other important results of this work are the identification of an irregularity index for small-bodies and the definition of a shape profile as a fingerprint of the 3D object under varying perspective.},
+  slides = {https://drive.google.com/file/d/1OCkDCmLHFHLs8nklH7XT-2rdVOk_wFjX/view?usp=share_link}
+}
 
 @inproceedings{topputo2021hera,
   bibtex_show = {true},
@@ -261,22 +277,6 @@
   issue = {22662.91206},
   preview = {pelayo2021blender.png},
   poster = {https://www.researchgate.net/profile/Pelayo-Penarroya-2/publication/351934301_USING_BLENDER_AS_CONTACT_DYNAMICS_ENGINE_FOR_CUBESAT_LANDING_SIMULATIONS_WITHIN_IMPACT_CRATER_ON_DIMORPHOS/links/60b09daba6fdcc647ee362b1/USING-BLENDER-AS-CONTACT-DYNAMICS-ENGINE-FOR-CUBESAT-LANDING-SIMULATIONS-WITHIN-IMPACT-CRATER-ON-DIMORPHOS.pdf},
-}
-
-@inproceedings{pugliatti2021shape,
-  bibtex_show={true},
-  title={Small-body shape recognition with convolutional neural network and comparison with explicit features based method},
-  author={Mattia Pugliatti and Francesco Topputo},
-  booktitle={Advances in the astronautical sciences},
-  year={2021},
-  month = {August},
-  volume = {175},
-  pages = {2539--2258},
-  publisher = {Univelt},
-  pdf = {https://www.researchgate.net/publication/344042457_Small-Body_shape_recognition_with_Convolutional_Neural_Network_and_comparison_with_explicit_features_based_methods},
-  preview = {pugliatti2021shape.png},
-  abstract = {Small-bodies such as asteroids and comets exhibit a wide variety of shapes and surface characteristics that are often unknown beforehand. Because of that, traditional exploration approaches do not make use of shape information on-board the spacecraft. This work would like to propose an approach based on Convolutional Neural Networks (CNN) to provide such type of information for on-board image processing and compare it with three more traditional approaches based on explicit image features such as Hu invariant moments, Fourier descriptors and polar outlines. A group of 8 different small-body shapes is chosen as archetype set and a database of images is generated to train these 4 techniques in the classification task. Their performances are then analyzed in three different scenarios. First, they are analyzed on the test set split from the database. In the second one the CNN is used to classify the shape of new objects that are not part of the archetype set. Lastly, all techniques are used under varying illumination conditions on some models from the archetype set. The CNN classifier outperforms the other methods, reaching an accuracy of 98.52%, meaningful classification on new models and a robust behaviour under varying illumination conditions. The latter property can be used for efficient training of the CNN with a smaller database. Given the promising results, the CNN classifier is proposed for onboard implementation to provide shape information. Other important results of this work are the identification of an irregularity index for small-bodies and the definition of a shape profile as a fingerprint of the 3D object under varying perspective.},
-  slides = {https://drive.google.com/file/d/1OCkDCmLHFHLs8nklH7XT-2rdVOk_wFjX/view?usp=share_link}
 }
 
 %%%%%%%%%%% 2017 %%%%%%%%%%%
