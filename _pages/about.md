@@ -6,7 +6,7 @@ subtitle: <a href='#'>PhD Student and ESR</a>. Politecnico di Milano, DART group
 
 profile:
   align: right
-  image: IMG_8139.jpg
+  image: photo_MattiaPugliatti.jpg
   image_circular: false # crops the image to make it circular
   address: >
     <p></p>
