@@ -2,24 +2,23 @@
 <html lang="en">
 
   <!-- Head -->
-  <head>    <!-- Metadata, OpenGraph and Schema.org -->
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    <!-- Metadata, OpenGraph and Schema.org -->
     
 
     <!-- Standard metadata -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>
-        Blog | Mattia  Pugliatti</title>
-    <meta name="author" content="Mattia  Pugliatti" />
-    <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
-" />
-    <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website" />
+    <title>The "Milani IP" Dataset | Mattia  Pugliatti</title>
+    <meta name="author" content="Mattia  Pugliatti">
+    <meta name="description" content="A description in a nutshell of the IP of Milani dataset">
+    <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
 
 
     <!-- Bootstrap & MDB -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-DF7Zhf293AJxJNTmh5zhoYYIMs2oXitRfBjY+9L//AY=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous">
 
     <!-- Fonts & Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
@@ -27,20 +26,23 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
 
     <!-- Code Syntax Highlighting -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="" id="highlight_theme_light" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="" id="highlight_theme_light">
 
+    
+    <!-- Sidebar Table of Contents -->
+    <link href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css" rel="stylesheet">
     
 
     <!-- Styles -->
     
-    <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛰️</text></svg>">
+    <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%9B%B0%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://mattiapugliatti.github.io/blog/">
+    <link rel="canonical" href="https://mattiapugliatti.github.io/blog/2023/milani/">
 
     <!-- Dark Mode -->
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/native.css" media="none" id="highlight_theme_dark" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/native.css" media="none" id="highlight_theme_dark">
 
     <script src="/assets/js/theme.js"></script>
     <script src="/assets/js/dark_mode.js"></script>
@@ -57,7 +59,7 @@
       <!-- Nav Bar -->
       <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
         <div class="container">
-          <a class="navbar-brand title font-weight-lighter" href="/"><span class="font-weight-bold">Mattia&nbsp;</span>Pugliatti</a>
+          <a class="navbar-brand title font-weight-lighter" href="/"><span class="font-weight-bold">Mattia </span>Pugliatti</a>
           <!-- Navbar Toggle -->
           <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="sr-only">Toggle navigation</span>
@@ -114,197 +116,143 @@
     <!-- Content -->
     <div class="container mt-5">
       
-        <div class="post">
+        
+        <div class="row">
+          <!-- sidebar, which will move to the top on a small screen -->
+          <div class="col-sm-3">
+            <nav id="toc-sidebar" class="sticky-top"></nav>
+          </div>
+          <!-- main content area -->
+          <div class="col-sm-9">
+            <!-- _layouts/post.html -->
 
-  
-  
+<div class="post">
 
-  
-  <div class="header-bar">
-    <h1>Weights and Biases</h1>
-    <h2>A simple collection of thoughts, ideas, and materials</h2>
-  </div>
-  
-
-  
-  <div class="tag-list">
-    <ul class="p-0 m-0">
-      
-        <li>
-          <i class="fas fa-hashtag fa-sm"></i> <a href="/blog/tag/formatting">formatting</a>
-        </li>
-        
-          <p>&bull;</p>
-        
-      
-        <li>
-          <i class="fas fa-hashtag fa-sm"></i> <a href="/blog/tag/images">images</a>
-        </li>
-        
-          <p>&bull;</p>
-        
-      
-        <li>
-          <i class="fas fa-hashtag fa-sm"></i> <a href="/blog/tag/links">links</a>
-        </li>
-        
-          <p>&bull;</p>
-        
-      
-        <li>
-          <i class="fas fa-hashtag fa-sm"></i> <a href="/blog/tag/math">math</a>
-        </li>
-        
-          <p>&bull;</p>
-        
-      
-        <li>
-          <i class="fas fa-hashtag fa-sm"></i> <a href="/blog/tag/code">code</a>
-        </li>
-        
-      
-    </ul>
-  </div>
-  
-
-  <ul class="post-list">
-    
-
-    
-    
-    
-    
-
-    <li>
-      <h3>
-        
-          <a class="post-title" href="/blog/2023/milani/">The "Milani IP" Dataset</a>
-        
-      </h3>
-      <p>A description in a nutshell of the IP of Milani dataset</p>
-      <p class="post-meta">
-        3 min read &nbsp; &middot; &nbsp;
-        June 3, 2023
-      </p>
-      <p class="post-tags">
-        <a href="/blog/2023">
-          <i class="fas fa-calendar fa-sm"></i> 2023 </a>
-
+  <header class="post-header">
+    <h1 class="post-title">The "Milani IP" Dataset</h1>
+    <p class="post-meta">June 3, 2023</p>
+    <p class="post-tags">
+      <a href="/blog/2023"> <i class="fas fa-calendar fa-sm"></i> 2023 </a>
+        ·  
+        <a href="/blog/category/dataset">
+          <i class="fas fa-tag fa-sm"></i> dataset</a>  
+          <a href="/blog/category/phase-angle">
+          <i class="fas fa-tag fa-sm"></i> phase-angle</a>  
+          <a href="/blog/category/regression">
+          <i class="fas fa-tag fa-sm"></i> regression</a>  
+          <a href="/blog/category/ip">
+          <i class="fas fa-tag fa-sm"></i> IP</a>  
+          <a href="/blog/category/milani">
+          <i class="fas fa-tag fa-sm"></i> Milani</a>  
           
 
-          
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/category/dataset">
-              <i class="fas fa-tag fa-sm"></i> dataset</a> &nbsp;
-              
-            <a href="/blog/category/phase-angle">
-              <i class="fas fa-tag fa-sm"></i> phase-angle</a> &nbsp;
-              
-            <a href="/blog/category/regression">
-              <i class="fas fa-tag fa-sm"></i> regression</a> &nbsp;
-              
-            <a href="/blog/category/ip">
-              <i class="fas fa-tag fa-sm"></i> IP</a> &nbsp;
-              
-            <a href="/blog/category/milani">
-              <i class="fas fa-tag fa-sm"></i> Milani</a> &nbsp;
-              
-          
     </p>
-    </li>
+  </header>
 
+  <article class="post-content">
     
+    <div id="markdown-content">
+      <h2 id="what-is-milani-ip-dataset-">What is “Milani IP” Dataset ?</h2>
 
-    
-    
-    
-    
+<p>This dataset contain data used in the work “The image processing of Milani challenges after DART impact”, by Mattia Pugliatti, Carmine Giordano, and Francesco Topputo, ESA-GNC conference, Sopot, Poland, June 2023.</p>
 
-    <li>
-      <h3>
-        
-          <a class="post-title" href="/blog/2023/doors/">The "DOORS" dataset</a>
-        
-      </h3>
-      <p>DOORS in a nutshell</p>
-      <p class="post-meta">
-        4 min read &nbsp; &middot; &nbsp;
-        June 2, 2023
-      </p>
-      <p class="post-tags">
-        <a href="/blog/2023">
-          <i class="fas fa-calendar fa-sm"></i> 2023 </a>
+<p>You can download it <a href="https://zenodo.org/record/7962714" rel="external nofollow noopener" target="_blank"> here </a> on Zenodo. What follows is a “description in a nutshell” of the dataset.</p>
 
-          
+<h2 id="why-does-it-exists">Why does it exists?</h2>
 
-          
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/category/dataset">
-              <i class="fas fa-tag fa-sm"></i> dataset</a> &nbsp;
-              
-            <a href="/blog/category/boulders">
-              <i class="fas fa-tag fa-sm"></i> boulders</a> &nbsp;
-              
-            <a href="/blog/category/segmentation">
-              <i class="fas fa-tag fa-sm"></i> segmentation</a> &nbsp;
-              
-            <a href="/blog/category/regression">
-              <i class="fas fa-tag fa-sm"></i> regression</a> &nbsp;
-              
-          
-    </p>
-    </li>
+<p>Because we wanted to encourage other researchers and IP designers to challenge our results and propose better ones to perform phase-angle estimates from images of the Didymos binary system.</p>
 
-    
+<h2 id="how-was-it-generated-">How was it generated ?</h2>
 
-    
-    
-    
-    
+<p>In Blender. The main dataset is comprised of two subsets: D1_with_sz_1p00s0 and D1_with_sz_0p78s0</p>
 
-    <li>
-      <h3>
-        
-          
-            <a class="post-title" href="https://medium.com/@al-folio/displaying-external-posts-on-your-al-folio-blog-b60a1d241a0a?source=rss-17feae71c3c4------2" target="_blank">Displaying External Posts on Your al-folio Blog</a>
-            <svg width="2rem" height="2rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-              <path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
-          
-        
-      </h3>
-      <p></p>
-      <p class="post-meta">
-        1 min read &nbsp; &middot; &nbsp;
-        April 23, 2022
-        &nbsp; &middot; &nbsp; medium.com
-      </p>
-      <p class="post-tags">
-        <a href="/blog/2022">
-          <i class="fas fa-calendar fa-sm"></i> 2022 </a>
+<ul>
+  <li>
+    <p>D1_with_sz_1p00s0 is made of 5000 image-label pairs with all the rendered data of Didymos using the axis scales of the Didymos Reference Model by ESA (old values before impact).</p>
+  </li>
+  <li>
+    <p>D1_with_sz_0p78s0 is made of 5000 image-label pairs with all the rendered data of Didymos using the updated axis scales from the Didymos Reference Model by JHUAPL (updated values after impact). This directory also contains the processed input-output pairs for the WCOB, NN, and PCE (X_features, Y) and CELM, and CNN (X_images, Y) methods illustrated in the original work. You can either decide to use the same processed data we have used for training, validation, and testing or you can work with the raw data to generate your own tailored dataset.</p>
+  </li>
+</ul>
 
-          
+<p>There is also auxiliary data that can be used for additional scopes. For example,</p>
 
-          
-    </p>
-    </li>
+<ul>
+  <li>
+    <p>CoefficientsPCE: with the “PCEFull9.mat” file with all the coefficients of the aPC basis and PCE listed in the paper, saved here as a .mat for convenience</p>
+  </li>
+  <li>
+    <p>TestResults: with the “ResultsAll.mat” file that contains the predicted and true values of phase angle over the test set illustrated in the paper and the “MakePlot.m” script in Matlab. You can use this data to compare your method directly with the results we have obtained in the original paper. The script generate a simple histogram plot and compute the mean, std, Q67, and Q95 values.</p>
+  </li>
+</ul>
 
-    
-  </ul>
+<h2 id="what-can-i-do-with-it">What can I do with it?</h2>
 
-  
+<p>In the original work for which the dataset has been designed, it has been used to perform:</p>
 
+<ul>
+  <li>Phase angle regression: to estimate the phase angle from the appearance of the primary asteroid, Didymos, in the images</li>
+</ul>
+
+<p>However, we have included all sorts of labels that can be used for many other tasks such as:</p>
+
+<ul>
+  <li>
+    <p>Centroid regression: to estimate the center of mass in image plane of Didymos (but also Dimorphos)</p>
+  </li>
+  <li>
+    <p>Object recognition: to perform object recognition and distinguish between Didymos and Dimorphos</p>
+  </li>
+</ul>
+
+<p>Let us know if you have come up with other uses of the dataset and we will update the list!</p>
+
+<h2 id="how-to-cite-it">How to cite it</h2>
+
+<p>The IP of Milani dataset: 
+Mattia Pugliatti, Carmine Giordano, &amp; Francesco Topputo. (2023). The image processing of Milani: challenges after DART impact (1.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.7962714</p>
+
+    </div>
+  </article><div id="giscus_thread" style="max-width: 800px; margin: 0 auto;">
+  <script>
+    let giscusTheme = localStorage.getItem("theme");
+    let giscusAttributes = {
+        "src": "https://giscus.app/client.js",
+        "data-repo": "alshedivat/al-folio",
+        "data-repo-id": "MDEwOlJlcG9zaXRvcnk2MDAyNDM2NQ==",
+        "data-category": "Comments",
+        "data-category-id": "DIC_kwDOA5PmLc4CTBt6",
+        "data-mapping": "title",
+        "data-strict": "1",
+        "data-reactions-enabled": "1",
+        "data-emit-metadata": "0",
+        "data-input-position": "bottom",
+        "data-theme": giscusTheme,
+        "data-lang": "en",
+        "crossorigin": "anonymous",
+        "async": "",
+    };
+
+
+    let giscusScript = document.createElement("script");
+    Object.entries(giscusAttributes).forEach(([key, value]) => giscusScript.setAttribute(key, value));
+    document.getElementById("giscus_thread").appendChild(giscusScript);
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://giscus.app/?ref_noscript" rel="external nofollow noopener" target="_blank">comments powered by giscus.</a>
+</noscript>
+</div>
 </div>
 
+          </div>
+        </div>
+        
       
     </div>
 
     <!-- Footer -->    
     <footer class="fixed-bottom">
       <div class="container mt-0">
-        &copy; Copyright 2023 Mattia  Pugliatti. Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
+        © Copyright 2023 Mattia  Pugliatti. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>.
 Last updated: June 03, 2023.
       </div>
     </footer>
@@ -325,6 +273,9 @@ Last updated: June 03, 2023.
   <!-- Medium Zoom JS -->
   <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.8/dist/medium-zoom.min.js" integrity="sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8=" crossorigin="anonymous"></script>
   <script defer src="/assets/js/zoom.js"></script>
+  <!-- Sidebar Table of Contents -->
+  <script defer src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+
 
   <!-- Bootstrap Table -->
   <link defer rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.21.3/dist/bootstrap-table.min.css">
