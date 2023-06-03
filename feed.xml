@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://mattiapugliatti.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://mattiapugliatti.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-06-03T21:48:17+00:00</updated><id>https://mattiapugliatti.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
-</subtitle><entry><title type="html">The “Milani IP” Dataset</title><link href="https://mattiapugliatti.github.io/blog/2023/milani/" rel="alternate" type="text/html" title="The “Milani IP” Dataset" /><published>2023-06-03T10:00:00+00:00</published><updated>2023-06-03T10:00:00+00:00</updated><id>https://mattiapugliatti.github.io/blog/2023/milani</id><content type="html" xml:base="https://mattiapugliatti.github.io/blog/2023/milani/"><![CDATA[<h2 id="what-is-milani-ip-dataset-">What is “Milani IP” Dataset ?</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://mattiapugliatti.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://mattiapugliatti.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-06-03T21:59:00+00:00</updated><id>https://mattiapugliatti.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+</subtitle><entry><title type="html">The “Milani IP” Dataset</title><link href="https://mattiapugliatti.github.io/blog/2023/milani/" rel="alternate" type="text/html" title="The “Milani IP” Dataset" /><published>2023-06-03T10:00:00+00:00</published><updated>2023-06-03T10:00:00+00:00</updated><id>https://mattiapugliatti.github.io/blog/2023/milani</id><content type="html" xml:base="https://mattiapugliatti.github.io/blog/2023/milani/"><![CDATA[<h2 id="what-is-the-milani-ip-dataset">What is the “Milani IP” Dataset?</h2>
 
-<p>This dataset contain data used in the work “The image processing of Milani challenges after DART impact”, by Mattia Pugliatti, Carmine Giordano, and Francesco Topputo, ESA-GNC conference, Sopot, Poland, June 2023.</p>
+<p>This dataset contains data used in the work “The image processing of Milani challenges after DART impact”, by Mattia Pugliatti, Carmine Giordano, and Francesco Topputo, ESA-GNC conference, Sopot, Poland, June 2023.</p>
 
 <p>You can download it <a href="https://zenodo.org/record/7962714"> here </a> on Zenodo. What follows is a “description in a nutshell” of the dataset.</p>
 
-<h2 id="why-does-it-exists">Why does it exists?</h2>
+<h2 id="why-does-it-exist">Why does it exist?</h2>
 
 <p>Because we wanted to encourage other researchers and IP designers to challenge our results and propose better ones to perform phase-angle estimates from images of the Didymos binary system.</p>
 
-<h2 id="how-was-it-generated-">How was it generated ?</h2>
+<h2 id="how-was-it-generated">How was it generated?</h2>
 
 <p>In Blender. The main dataset is comprised of two subsets: D1_with_sz_1p00s0 and D1_with_sz_0p78s0</p>
 
@@ -29,7 +29,7 @@
     <p>CoefficientsPCE: with the “PCEFull9.mat” file with all the coefficients of the aPC basis and PCE listed in the paper, saved here as a .mat for convenience</p>
   </li>
   <li>
-    <p>TestResults: with the “ResultsAll.mat” file that contains the predicted and true values of phase angle over the test set illustrated in the paper and the “MakePlot.m” script in Matlab. You can use this data to compare your method directly with the results we have obtained in the original paper. The script generate a simple histogram plot and compute the mean, std, Q67, and Q95 values.</p>
+    <p>TestResults: with the “ResultsAll.mat” file that contains the predicted and true values of phase angle over the test set illustrated in the paper and the “MakePlot.m” script in Matlab. You can use this data to compare your method directly with the results we have obtained in the original paper. The script generates a simple histogram plot and computes the mean, std, Q67, and Q95 values.</p>
   </li>
 </ul>
 
@@ -45,7 +45,7 @@
 
 <ul>
   <li>
-    <p>Centroid regression: to estimate the center of mass in image plane of Didymos (but also Dimorphos)</p>
+    <p>Centroid regression: to estimate the center of mass in the image plane of Didymos (but also Dimorphos)</p>
   </li>
   <li>
     <p>Object recognition: to perform object recognition and distinguish between Didymos and Dimorphos</p>
@@ -56,8 +56,7 @@
 
 <h2 id="how-to-cite-it">How to cite it</h2>
 
-<p>The IP of Milani dataset: 
-Mattia Pugliatti, Carmine Giordano, &amp; Francesco Topputo. (2023). The image processing of Milani: challenges after DART impact (1.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.7962714</p>]]></content><author><name></name></author><category term="dataset" /><category term="phase-angle" /><category term="regression" /><category term="IP" /><category term="Milani" /><summary type="html"><![CDATA[A description in a nutshell of the IP of Milani dataset]]></summary></entry><entry><title type="html">The “DOORS” dataset</title><link href="https://mattiapugliatti.github.io/blog/2023/doors/" rel="alternate" type="text/html" title="The “DOORS” dataset" /><published>2023-06-02T10:00:00+00:00</published><updated>2023-06-02T10:00:00+00:00</updated><id>https://mattiapugliatti.github.io/blog/2023/doors</id><content type="html" xml:base="https://mattiapugliatti.github.io/blog/2023/doors/"><![CDATA[<h2 id="what-is-doors-">What is “DOORS” ?</h2>
+<p>Mattia Pugliatti, Carmine Giordano, &amp; Francesco Topputo. (2023). The image processing of Milani: challenges after DART impact (1.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.7962714</p>]]></content><author><name></name></author><category term="phase-angle" /><category term="IP-Milani" /><category term="dataset" /><category term="regression" /><summary type="html"><![CDATA[A description in a nutshell of the IP of Milani dataset]]></summary></entry><entry><title type="html">The “DOORS” dataset</title><link href="https://mattiapugliatti.github.io/blog/2023/doors/" rel="alternate" type="text/html" title="The “DOORS” dataset" /><published>2023-06-02T10:00:00+00:00</published><updated>2023-06-02T10:00:00+00:00</updated><id>https://mattiapugliatti.github.io/blog/2023/doors</id><content type="html" xml:base="https://mattiapugliatti.github.io/blog/2023/doors/"><![CDATA[<h2 id="what-is-doors-">What is “DOORS” ?</h2>
 
 <p>DOORS stands for “Dataset fOr bOuldeRs Segmentation” and is an open-access dataset with single and multiple boulders rendered in Blender over the surface of a small body. You can download it <a href="https://zenodo.org/record/7107409"> here </a> on Zenodo.</p>
 
@@ -129,4 +128,4 @@ Mattia Pugliatti, &amp; Francesco Topputo. (2022). DOORS: Dataset fOr bOuldeRs S
 “DOORS: Dataset fOr bOuldeRs Segmentation. Statistical properties and Blender setup”, by Mattia Pugliatti and Francesco Topputo, arXiv pre-print, Oct 2022, https://arxiv.org/pdf/2210.16253.pdf</p>
 
 <p>The original paper in which it was first used: 
-“Boulders identification on small bodies under varying illumination conditions”, by Mattia Pugliatti and Francesco Topputo, 3rd Space Imaging Workshop, Georgia, Atlanta, arXiv pre-print, Oct 2022, https://arxiv.org/pdf/2210.16283.pdf</p>]]></content><author><name></name></author><category term="dataset" /><category term="boulders" /><category term="segmentation" /><category term="regression" /><summary type="html"><![CDATA[DOORS in a nutshell]]></summary></entry><entry><title type="html">Displaying External Posts on Your al-folio Blog</title><link href="https://mattiapugliatti.github.io/blog/2022/displaying-external-posts-on-your-al-folio-blog/" rel="alternate" type="text/html" title="Displaying External Posts on Your al-folio Blog" /><published>2022-04-23T23:20:09+00:00</published><updated>2022-04-23T23:20:09+00:00</updated><id>https://mattiapugliatti.github.io/blog/2022/displaying-external-posts-on-your-al-folio-blog</id><content type="html" xml:base="https://mattiapugliatti.github.io/blog/2022/displaying-external-posts-on-your-al-folio-blog/"><![CDATA[]]></content><author><name></name></author></entry></feed>
+“Boulders identification on small bodies under varying illumination conditions”, by Mattia Pugliatti and Francesco Topputo, 3rd Space Imaging Workshop, Georgia, Atlanta, arXiv pre-print, Oct 2022, https://arxiv.org/pdf/2210.16283.pdf</p>]]></content><author><name></name></author><category term="boulders" /><category term="regression" /><category term="dataset" /><category term="segmentation" /><summary type="html"><![CDATA[DOORS in a nutshell]]></summary></entry><entry><title type="html">Displaying External Posts on Your al-folio Blog</title><link href="https://mattiapugliatti.github.io/blog/2022/displaying-external-posts-on-your-al-folio-blog/" rel="alternate" type="text/html" title="Displaying External Posts on Your al-folio Blog" /><published>2022-04-23T23:20:09+00:00</published><updated>2022-04-23T23:20:09+00:00</updated><id>https://mattiapugliatti.github.io/blog/2022/displaying-external-posts-on-your-al-folio-blog</id><content type="html" xml:base="https://mattiapugliatti.github.io/blog/2022/displaying-external-posts-on-your-al-folio-blog/"><![CDATA[]]></content><author><name></name></author></entry></feed>
