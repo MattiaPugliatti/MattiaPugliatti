@@ -1,0 +1,54 @@
+---
+layout: post
+title: The "Milani IP" Dataset
+date: 2023-06-03 10:00:00-0000
+description: A description in a nutshell of the IP of Milani dataset
+categories: dataset phase-angle regression IP Milani
+giscus_comments: true
+related_posts: false
+toc:
+  sidebar: left
+---
+
+## What is "Milani IP" Dataset ? 
+
+This dataset contain data used in the work "The image processing of Milani challenges after DART impact", by Mattia Pugliatti, Carmine Giordano, and Francesco Topputo, ESA-GNC conference, Sopot, Poland, June 2023. 
+
+You can download it <a href="https://zenodo.org/record/7962714"> here </a> on Zenodo. What follows is a "description in a nutshell" of the dataset. 
+
+## Why does it exists? 
+
+Because we wanted to encourage other researchers and IP designers to challenge our results and propose better ones to perform phase-angle estimates from images of the Didymos binary system. 
+
+## How was it generated ?
+
+In Blender. The main dataset is comprised of two subsets: D1_with_sz_1p00s0 and D1_with_sz_0p78s0
+
+- D1_with_sz_1p00s0 is made of 5000 image-label pairs with all the rendered data of Didymos using the axis scales of the Didymos Reference Model by ESA (old values before impact).
+
+- D1_with_sz_0p78s0 is made of 5000 image-label pairs with all the rendered data of Didymos using the updated axis scales from the Didymos Reference Model by JHUAPL (updated values after impact). This directory also contains the processed input-output pairs for the WCOB, NN, and PCE (X_features, Y) and CELM, and CNN (X_images, Y) methods illustrated in the original work. You can either decide to use the same processed data we have used for training, validation, and testing or you can work with the raw data to generate your own tailored dataset. 
+
+There is also auxiliary data that can be used for additional scopes. For example, 
+
+- CoefficientsPCE: with the "PCEFull9.mat" file with all the coefficients of the aPC basis and PCE listed in the paper, saved here as a .mat for convenience
+
+- TestResults: with the "ResultsAll.mat" file that contains the predicted and true values of phase angle over the test set illustrated in the paper and the "MakePlot.m" script in Matlab. You can use this data to compare your method directly with the results we have obtained in the original paper. The script generate a simple histogram plot and compute the mean, std, Q67, and Q95 values.     
+
+## What can I do with it? 
+
+In the original work for which the dataset has been designed, it has been used to perform:
+
+- Phase angle regression: to estimate the phase angle from the appearance of the primary asteroid, Didymos, in the images
+
+However, we have included all sorts of labels that can be used for many other tasks such as: 
+
+- Centroid regression: to estimate the center of mass in image plane of Didymos (but also Dimorphos)
+
+- Object recognition: to perform object recognition and distinguish between Didymos and Dimorphos
+
+Let us know if you have come up with other uses of the dataset and we will update the list!
+
+## How to cite it
+
+The IP of Milani dataset: 
+Mattia Pugliatti, Carmine Giordano, & Francesco Topputo. (2023). The image processing of Milani: challenges after DART impact (1.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.7962714

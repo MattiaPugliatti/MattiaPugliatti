@@ -1,0 +1,71 @@
+---
+layout: post
+title: The "DOORS" dataset
+date: 2023-06-02 10:00:00-0000
+description: DOORS in a nutshell
+categories: dataset boulders segmentation regression
+giscus_comments: true
+related_posts: false
+toc:
+  sidebar: left
+---
+
+## What is "DOORS" ? 
+
+DOORS stands for "Dataset fOr bOuldeRs Segmentation" and is an open-access dataset with single and multiple boulders rendered in Blender over the surface of a small body. You can download it <a href="https://zenodo.org/record/7107409"> here </a> on Zenodo.
+
+Also, you can find a detailed description of the dataset <a href="https://arxiv.org/pdf/2210.16253.pdf"> here </a> on ArXiv.  What follows is a "description in a nutshell" of the dataset. 
+
+## Why does it exist? 
+
+Because the capability to detect boulders on the surface of small bodies is beneficial for vision-based applications such as hazard detection during critical operations and navigation. This task is challenging due to the wide assortment of irregular shapes, the characteristics of the boulders population, and the rapid variability in the illumination conditions. We believe that the lack of publicly available and labeled datasets for these applications damps the research on this particular area, thus, we have decided to release the internal dataset we have used in "Boulders identification on small bodies under varying illumination conditions" (by Mattia Pugliatti and Francesco Topputo, 3rd Space Imaging Workshop, Georgia, Atlanta, arXiv pre-print, Oct 2022, https://arxiv.org/pdf/2210.16283.pdf) for anyone who wants to play with it. 
+
+## How was it generated?
+
+In Blender. The dataset is comprised of two subsets: DS1 and DS2, that are made with slightly different settings. 
+
+DS1 is made of 45269 image-label pairs in which a single boulder is represented in the image. The renderings are done in Blender using the following elements: 
+
+1. A single randomly-generated boulder whose Center of Mass (CoM) is positioned in the center of the
+Blender reference frame
+2. A unitary spherical mesh made of 16’258 vertexes and 32’512 faces
+3. A camera, modeled with a 256 × 256 px size sensor and a FOV of 10 × 10 deg
+4. A Sun lamp illuminating the scene
+
+DS2 is made of 35183 image-label pairs in which multiple boulders are represented in the same image. The renderings are done in Blender using the following elements:
+
+1. A medium-resolution mesh of the (65803) Didymos asteroid made of 652’032 faces that represents the
+surface
+2. A particle system that scatters randomized populations of boulders from a collection of 30 samples across the surface
+3. A camera, modeled with a 128 × 128 px size sensor and a FOV of 10 × 10 deg
+4. A Sun lamp illuminating the scene
+
+## What can I do with it? 
+
+In the original work for which the dataset has been designed, it has been used to perform:
+
+- Centroid regression: to estimate the center of mass in the image plane of irregular bodies
+
+- Boulder segmentation: to segment boulders in images of small body surfaces
+
+However, we have included all sorts of labels that can be used for many other tasks such as: 
+
+- pose regression: to estimate the camera pose (position and orientation) associated with each image
+
+- Boulder recognition: to estimate the class of the boulder among the three ones used (Ice, Asteroid, River)
+
+- Phase angle regression: to estimate the phase angle from the shadows in the images
+
+Let us know if you have come up with other uses of the dataset and we will update the list!
+
+## How to cite it
+
+The DOORS dataset: 
+Mattia Pugliatti, & Francesco Topputo. (2022). DOORS: Dataset fOr bOuldeRs Segmentation (1.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.7107409
+
+The statistical characterization of the DOORS dataset: 
+"DOORS: Dataset fOr bOuldeRs Segmentation. Statistical properties and Blender setup", by Mattia Pugliatti and Francesco Topputo, arXiv pre-print, Oct 2022, https://arxiv.org/pdf/2210.16253.pdf
+
+The original paper in which it was first used: 
+"Boulders identification on small bodies under varying illumination conditions", by Mattia Pugliatti and Francesco Topputo, 3rd Space Imaging Workshop, Georgia, Atlanta, arXiv pre-print, Oct 2022, https://arxiv.org/pdf/2210.16283.pdf
+
