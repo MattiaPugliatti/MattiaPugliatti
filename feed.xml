@@ -1,16 +1,55 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://mattiapugliatti.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://mattiapugliatti.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-06-03T15:44:46+00:00</updated><id>https://mattiapugliatti.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://mattiapugliatti.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://mattiapugliatti.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-06-03T20:59:23+00:00</updated><id>https://mattiapugliatti.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 </subtitle><entry><title type="html">The “DOORS” dataset</title><link href="https://mattiapugliatti.github.io/blog/2023/sidebar-table-of-contents/" rel="alternate" type="text/html" title="The “DOORS” dataset" /><published>2023-06-02T10:00:00+00:00</published><updated>2023-06-02T10:00:00+00:00</updated><id>https://mattiapugliatti.github.io/blog/2023/sidebar-table-of-contents</id><content type="html" xml:base="https://mattiapugliatti.github.io/blog/2023/sidebar-table-of-contents/"><![CDATA[<h2 id="what-is-doors-">What is “DOORS” ?</h2>
 
-<p><a href="https://www.pinterest.com"> Zenodo link for the dataset </a></p>
+<p>DOORS stands for “Dataset fOr bOuldeRs Segmentation” and is an open-access dataset with single and multiple boulders rendered in Blender over the surface of a small body. You can download it <a href="https://zenodo.org/record/7107409"> here </a> on Zenodo.</p>
 
-<h2 id="some-statistics-about-doors">Some statistics about DOORS</h2>
+<p>Also, you can found a detailed description of the dataset <a href="https://arxiv.org/pdf/2210.16253.pdf"> here </a> on ArXiv.  What follows is a “description in a nutshell” of the dataset.</p>
+
+<h2 id="why-does-it-exists">Why does it exists?</h2>
+
+<p>Because the capability to detect boulders on the surface of small bodies is beneficial for vision-based applications such as hazard detection during critical operations and navigation. This task is challenging due to the wide assortment of irregular shapes, the characteristics of the boulders population, and the rapid variability in the illumination conditions. We believe that the lack of publicly available and labeled datasets for these applications damps the research on this particular area, thus, we have decided to release our internal dataset we have used in CITE HERE for anyone who wants to play with it.</p>
 
 <h2 id="how-was-it-generated-">How was it generated ?</h2>
 
+<p>In Blender. The dataset is comprised by two subsets: DS1 and DS2, that are made with slightly different settings.</p>
+
+<p>DS1 is made of 45269 image-label pairs in which a single boulder is represented in the image. The renderings are done in Blender using the following elements:</p>
+
+<ol>
+  <li>A single randomly-generated boulder whose Center of Mass (CoM) is positioned in the center of the
+Blender reference frame</li>
+  <li>A unitary spherical mesh made of 16’258 vertexes and 32’512 faces</li>
+  <li>A camera, modeled with a 256 × 256 px size sensor and a FOV of 10 × 10 deg</li>
+  <li>A Sun lamp illuminating the scene</li>
+</ol>
+
+<p>DS2 is made of image-label pairs in which a multiple boulders are represented in the same image. The renderings are done in Blender using the following elements:</p>
+
+<ol>
+  <li>A medium resolution mesh of the (65803) Didymos asteroid made of 652’032 faces that represents the
+surface</li>
+  <li>A particle system which scatters randomized populations of boulders from a collection of 30 samples across the surface</li>
+  <li>A camera, modeled with a 128 × 128 px size sensor and a FOV of 10 × 10 deg</li>
+  <li>A Sun lamp illuminating the scene</li>
+</ol>
+
 <h2 id="examples-of-what-can-you-do-with-it">Examples of what can you do with it</h2>
 
-<ul>
-  <li>Regression</li>
-  <li>Classification</li>
-  <li>Segmentation</li>
-</ul>]]></content><author><name></name></author><category term="dataset" /><category term="boulders" /><category term="segmentation" /><category term="regression" /><summary type="html"><![CDATA[Description of the DOORS dataset]]></summary></entry><entry><title type="html">Displaying External Posts on Your al-folio Blog</title><link href="https://mattiapugliatti.github.io/blog/2022/displaying-external-posts-on-your-al-folio-blog/" rel="alternate" type="text/html" title="Displaying External Posts on Your al-folio Blog" /><published>2022-04-23T23:20:09+00:00</published><updated>2022-04-23T23:20:09+00:00</updated><id>https://mattiapugliatti.github.io/blog/2022/displaying-external-posts-on-your-al-folio-blog</id><content type="html" xml:base="https://mattiapugliatti.github.io/blog/2022/displaying-external-posts-on-your-al-folio-blog/"><![CDATA[]]></content><author><name></name></author></entry></feed>
+<p>In the original work for which the dataset has been designed, it has been used to perform:</p>
+
+<p>-Centroid regression: Contains images, masks, and labels for 4 splits of single boulders positioned on the surface of a spherical mesh. It can be used to perform navigation, boulder recognition, segmentation, and centroid regression.</p>
+
+<p>-boulder segmentation: Contain images, masks, and labels of 2 datasets: DS1 and DS2. DS1 is made of the same images of the Regression dataset but is specifically designed for segmentation. DS2 is made of images with multiple instances of boulders appearing on the surface of the Didymos asteroid model</p>
+
+<p>However, we have included all sorts of labels that can be used for many other tasks such as:</p>
+
+<p>-navigation
+-boulder recognition</p>
+
+<h2 id="do-you-want-to-use-this-dataset-and-dont-know-how-to-cite-it">Do you want to use this dataset and don’t know how to cite it?</h2>
+
+<p>Mattia Pugliatti, &amp; Francesco Topputo. (2022). DOORS: Dataset fOr bOuldeRs Segmentation (1.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.7107409</p>
+
+<h2 id="some-statistics-about-doors">Some statistics about DOORS</h2>
+
+<p>You can find a detailed characterization of the statistical properties of the DOORS dataset “DOORS: Dataset fOr bOuldeRs Segmentation. Statistical properties and Blender setup”, by Mattia Pugliatti and Francesco Topputo, arXiv pre-print, Oct 2022 [<a href="https://arxiv.org/pdf/2210.16253.pdf"> link here </a> on ArXiv]</p>]]></content><author><name></name></author><category term="dataset" /><category term="boulders" /><category term="segmentation" /><category term="regression" /><summary type="html"><![CDATA[DOORS in a nutshell]]></summary></entry><entry><title type="html">Displaying External Posts on Your al-folio Blog</title><link href="https://mattiapugliatti.github.io/blog/2022/displaying-external-posts-on-your-al-folio-blog/" rel="alternate" type="text/html" title="Displaying External Posts on Your al-folio Blog" /><published>2022-04-23T23:20:09+00:00</published><updated>2022-04-23T23:20:09+00:00</updated><id>https://mattiapugliatti.github.io/blog/2022/displaying-external-posts-on-your-al-folio-blog</id><content type="html" xml:base="https://mattiapugliatti.github.io/blog/2022/displaying-external-posts-on-your-al-folio-blog/"><![CDATA[]]></content><author><name></name></author></entry></feed>

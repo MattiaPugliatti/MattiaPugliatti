@@ -12,7 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>The "DOORS" dataset | Mattia  Pugliatti</title>
     <meta name="author" content="Mattia  Pugliatti">
-    <meta name="description" content="Description of the DOORS dataset">
+    <meta name="description" content="DOORS in a nutshell">
     <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
 
 
@@ -152,19 +152,58 @@
     <div id="markdown-content">
       <h2 id="what-is-doors-">What is “DOORS” ?</h2>
 
-<p><a href="https://www.pinterest.com" rel="external nofollow noopener" target="_blank"> Zenodo link for the dataset </a></p>
+<p>DOORS stands for “Dataset fOr bOuldeRs Segmentation” and is an open-access dataset with single and multiple boulders rendered in Blender over the surface of a small body. You can download it <a href="https://zenodo.org/record/7107409" rel="external nofollow noopener" target="_blank"> here </a> on Zenodo.</p>
 
-<h2 id="some-statistics-about-doors">Some statistics about DOORS</h2>
+<p>Also, you can found a detailed description of the dataset <a href="https://arxiv.org/pdf/2210.16253.pdf" rel="external nofollow noopener" target="_blank"> here </a> on ArXiv.  What follows is a “description in a nutshell” of the dataset.</p>
+
+<h2 id="why-does-it-exists">Why does it exists?</h2>
+
+<p>Because the capability to detect boulders on the surface of small bodies is beneficial for vision-based applications such as hazard detection during critical operations and navigation. This task is challenging due to the wide assortment of irregular shapes, the characteristics of the boulders population, and the rapid variability in the illumination conditions. We believe that the lack of publicly available and labeled datasets for these applications damps the research on this particular area, thus, we have decided to release our internal dataset we have used in CITE HERE for anyone who wants to play with it.</p>
 
 <h2 id="how-was-it-generated-">How was it generated ?</h2>
 
+<p>In Blender. The dataset is comprised by two subsets: DS1 and DS2, that are made with slightly different settings.</p>
+
+<p>DS1 is made of 45269 image-label pairs in which a single boulder is represented in the image. The renderings are done in Blender using the following elements:</p>
+
+<ol>
+  <li>A single randomly-generated boulder whose Center of Mass (CoM) is positioned in the center of the
+Blender reference frame</li>
+  <li>A unitary spherical mesh made of 16’258 vertexes and 32’512 faces</li>
+  <li>A camera, modeled with a 256 × 256 px size sensor and a FOV of 10 × 10 deg</li>
+  <li>A Sun lamp illuminating the scene</li>
+</ol>
+
+<p>DS2 is made of image-label pairs in which a multiple boulders are represented in the same image. The renderings are done in Blender using the following elements:</p>
+
+<ol>
+  <li>A medium resolution mesh of the (65803) Didymos asteroid made of 652’032 faces that represents the
+surface</li>
+  <li>A particle system which scatters randomized populations of boulders from a collection of 30 samples across the surface</li>
+  <li>A camera, modeled with a 128 × 128 px size sensor and a FOV of 10 × 10 deg</li>
+  <li>A Sun lamp illuminating the scene</li>
+</ol>
+
 <h2 id="examples-of-what-can-you-do-with-it">Examples of what can you do with it</h2>
 
-<ul>
-  <li>Regression</li>
-  <li>Classification</li>
-  <li>Segmentation</li>
-</ul>
+<p>In the original work for which the dataset has been designed, it has been used to perform:</p>
+
+<p>-Centroid regression: Contains images, masks, and labels for 4 splits of single boulders positioned on the surface of a spherical mesh. It can be used to perform navigation, boulder recognition, segmentation, and centroid regression.</p>
+
+<p>-boulder segmentation: Contain images, masks, and labels of 2 datasets: DS1 and DS2. DS1 is made of the same images of the Regression dataset but is specifically designed for segmentation. DS2 is made of images with multiple instances of boulders appearing on the surface of the Didymos asteroid model</p>
+
+<p>However, we have included all sorts of labels that can be used for many other tasks such as:</p>
+
+<p>-navigation
+-boulder recognition</p>
+
+<h2 id="do-you-want-to-use-this-dataset-and-dont-know-how-to-cite-it">Do you want to use this dataset and don’t know how to cite it?</h2>
+
+<p>Mattia Pugliatti, &amp; Francesco Topputo. (2022). DOORS: Dataset fOr bOuldeRs Segmentation (1.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.7107409</p>
+
+<h2 id="some-statistics-about-doors">Some statistics about DOORS</h2>
+
+<p>You can find a detailed characterization of the statistical properties of the DOORS dataset “DOORS: Dataset fOr bOuldeRs Segmentation. Statistical properties and Blender setup”, by Mattia Pugliatti and Francesco Topputo, arXiv pre-print, Oct 2022 [<a href="https://arxiv.org/pdf/2210.16253.pdf" rel="external nofollow noopener" target="_blank"> link here </a> on ArXiv]</p>
 
 
     </div>
