@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://mattiapugliatti.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://mattiapugliatti.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-06-04T08:38:25+00:00</updated><id>https://mattiapugliatti.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://mattiapugliatti.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://mattiapugliatti.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-06-04T08:51:32+00:00</updated><id>https://mattiapugliatti.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 </subtitle><entry><title type="html">The “Milani IP” Dataset</title><link href="https://mattiapugliatti.github.io/blog/2023/milani/" rel="alternate" type="text/html" title="The “Milani IP” Dataset" /><published>2023-05-29T10:00:00+00:00</published><updated>2023-05-29T10:00:00+00:00</updated><id>https://mattiapugliatti.github.io/blog/2023/milani</id><content type="html" xml:base="https://mattiapugliatti.github.io/blog/2023/milani/"><![CDATA[<h2 id="what-is-the-milani-ip-dataset">What is the “Milani IP” Dataset?</h2>
 
 <p>This dataset contains data used in the work “The image processing of Milani challenges after DART impact”, by Mattia Pugliatti, Carmine Giordano, and Francesco Topputo, ESA-GNC conference, Sopot, Poland, June 2023.</p>
@@ -70,6 +70,30 @@
 
 <p>In Blender. The dataset is comprised of two subsets: DS1 and DS2, that are made with slightly different settings.</p>
 
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/DS1.gif-480.webp" />
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/DS1.gif-800.webp" />
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/DS1.gif-1400.webp" />
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/DS1.gif" class="img-fluid rounded z-depth-1" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+<div class="caption">
+    Samples of DS1
+</div>
+
 <p>DS1 is made of 45269 image-label pairs in which a single boulder is represented in the image. The renderings are done in Blender using the following elements:</p>
 
 <ol>
@@ -79,6 +103,30 @@ Blender reference frame</li>
   <li>A camera, modeled with a 256 × 256 px size sensor and a FOV of 10 × 10 deg</li>
   <li>A Sun lamp illuminating the scene</li>
 </ol>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/DS2.gif-480.webp" />
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/DS2.gif-800.webp" />
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/DS2.gif-1400.webp" />
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/DS2.gif" class="img-fluid rounded z-depth-1" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+<div class="caption">
+    Samples of DS2
+</div>
 
 <p>DS2 is made of 35183 image-label pairs in which multiple boulders are represented in the same image. The renderings are done in Blender using the following elements:</p>
 
