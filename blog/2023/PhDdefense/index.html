@@ -10,10 +10,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>segmentation | Mattia  Pugliatti</title>
+    <title>My Ph.D. defense | Mattia  Pugliatti</title>
     <meta name="author" content="Mattia  Pugliatti">
-    <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
-">
+    <meta name="description" content="Brief overview, recording, and presentation of my Ph.D. defense at Politecnico di Milano">
     <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
 
 
@@ -30,13 +29,16 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="" id="highlight_theme_light">
 
     
+    <!-- Sidebar Table of Contents -->
+    <link href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css" rel="stylesheet">
+    
 
     <!-- Styles -->
     
     <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%9B%B0%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://mattiapugliatti.github.io/blog/category/segmentation/">
+    <link rel="canonical" href="https://mattiapugliatti.github.io/blog/2023/PhDdefense/">
 
     <!-- Dark Mode -->
     
@@ -114,37 +116,107 @@
     <!-- Content -->
     <div class="container mt-5">
       
-        <div class="post">
+        
+        <div class="row">
+          <!-- sidebar, which will move to the top on a small screen -->
+          <div class="col-sm-3">
+            <nav id="toc-sidebar" class="sticky-top"></nav>
+          </div>
+          <!-- main content area -->
+          <div class="col-sm-9">
+            <!-- _layouts/post.html -->
+
+<div class="post">
 
   <header class="post-header">
-    <h1 class="post-title"> <i class="fas fa-tag fa-sm"></i> segmentation </h1>
-    <p class="post-description"> an archive of posts in this category </p>
+    <h1 class="post-title">My Ph.D. defense</h1>
+    <p class="post-meta">November 27, 2023</p>
+    <p class="post-tags">
+      <a href="/blog/2023"> <i class="fas fa-calendar fa-sm"></i> 2023 </a>
+        ·  
+        <a href="/blog/tag/dataset">
+          <i class="fas fa-hashtag fa-sm"></i> dataset</a>  
+          
+        ·  
+        <a href="/blog/category/phd">
+          <i class="fas fa-tag fa-sm"></i> PhD</a>  
+          <a href="/blog/category/data-driven">
+          <i class="fas fa-tag fa-sm"></i> data-driven</a>  
+          <a href="/blog/category/regression">
+          <i class="fas fa-tag fa-sm"></i> regression</a>  
+          <a href="/blog/category/segmentation">
+          <i class="fas fa-tag fa-sm"></i> segmentation</a>  
+          
+
+    </p>
   </header>
 
-  <article>
-    <div class="table-responsive">
-      <table class="table table-sm table-borderless">
-        
-        <tr>
-          <th scope="row">Nov 27, 2023</th>
-          <td>
-              <a class="post-link" href="/blog/2023/PhDdefense/">My Ph.D. defense</a>
-          </td>
-        </tr>
-      
-        <tr>
-          <th scope="row">Oct 14, 2022</th>
-          <td>
-              <a class="post-link" href="/blog/2022/doors/">The "DOORS" dataset</a>
-          </td>
-        </tr>
-      
-      </table>
-    </div>
-  </article>
+  <article class="post-content">
+    
+    <div id="markdown-content">
+      <h2 id="intro">Intro</h2>
 
+<p>On the 27th of November 2023, I successfully defended my Ph.D. thesis with the title “Data-Driven Image Processing for Enhanced Vision-Based Applications Around Small Bodies With Machine Learning”.</p>
+
+<p>If you would have been interested in attending but you missed it, don’t worry! In this post, I share all the publicly available material about the defense and the manuscript, with the hope that it could be useful for someone else. Enjoy!</p>
+
+<h2 id="abstract">Abstract</h2>
+
+<p>The space sector is undergoing rapid growth, especially in near-Earth orbits, promising unprecedented benefits through integrated space-based services. At the same time, CubeSats are reshaping deep space by diversifying scientific objectives and complementing traditional missions. Profiting from this favorable environment, a surge in deep-space missions dedicated to the exploration and exploitation of the Solar System is on the horizon. Within this context, small celestial bodies, such as asteroids and comets, emerge as intriguing targets due to their abundance, proximity to Earth’s orbit, ancient origins, importance for planetary defense, potential for resource utilization, and the quest for extraterrestrial life. However, the operation of a large fleet of spacecraft exploring these deep space bodies poses critical challenges when approached with the current ground-based paradigm. Driven by the need for real-time decision-making and cost-effective solutions, technological advancements are gearing towards autonomous spacecraft operations. Within this context, artificial intelligence enhancements on computer vision tasks are posed to enrich perception and spatial comprehension of the surrounding environment, enabling intelligent spacecraft to operate effortlessly and autonomously. Image segmentation and visual-based navigation, in particular, are investigated in this manuscript using neural networks and machine learning approaches. Data-driven image processing options are also assessed for the future CubeSat mission Milani, which will visit the Didymos binary system. Milani’s semi-autonomous vision-based capabilities pave the way for adopting data-driven algorithms in deep space. Assessing the performance of these techniques is as important as highlighting their drawbacks and the challenges associated with their development, primarily related to the availability of high-quality training data. The integration of artificial intelligence and autonomous capabilities holds the potential to revolutionize our engagement with minor bodies, shaping the future of space exploration.</p>
+
+<h2 id="usefukl-links">Usefukl links</h2>
+
+<ul>
+  <li>
+    <p>Defense video: <a href="https://drive.google.com/file/d/1LqbR87qLxVOnVJkaNRnpOtmr22fWC5Vj/view?usp=sharing" rel="external nofollow noopener" target="_blank"> here </a></p>
+  </li>
+  <li>
+    <p>Defense slides: <a href="https://drive.google.com/file/d/1mARpjKxvLETxslgYHqYp5j9VPgFi8kA5/view?usp=sharing" rel="external nofollow noopener" target="_blank"> PDF-slides </a></p>
+  </li>
+  <li>
+    <p>Thesis manuscript: <a href="https://hdl.handle.net/10589/213552" rel="external nofollow noopener" target="_blank"> POLItesi </a></p>
+  </li>
+</ul>
+
+<h2 id="acknowledgments">Acknowledgments</h2>
+
+<p>Let me thank the reviewers () and comission member for their work.</p>
+
+
+    </div>
+  </article><div id="giscus_thread" style="max-width: 800px; margin: 0 auto;">
+  <script>
+    let giscusTheme = localStorage.getItem("theme");
+    let giscusAttributes = {
+        "src": "https://giscus.app/client.js",
+        "data-repo": "alshedivat/al-folio",
+        "data-repo-id": "MDEwOlJlcG9zaXRvcnk2MDAyNDM2NQ==",
+        "data-category": "Comments",
+        "data-category-id": "DIC_kwDOA5PmLc4CTBt6",
+        "data-mapping": "title",
+        "data-strict": "1",
+        "data-reactions-enabled": "1",
+        "data-emit-metadata": "0",
+        "data-input-position": "bottom",
+        "data-theme": giscusTheme,
+        "data-lang": "en",
+        "crossorigin": "anonymous",
+        "async": "",
+    };
+
+
+    let giscusScript = document.createElement("script");
+    Object.entries(giscusAttributes).forEach(([key, value]) => giscusScript.setAttribute(key, value));
+    document.getElementById("giscus_thread").appendChild(giscusScript);
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://giscus.app/?ref_noscript" rel="external nofollow noopener" target="_blank">comments powered by giscus.</a>
+</noscript>
+</div>
 </div>
 
+          </div>
+        </div>
+        
       
     </div>
 
@@ -172,6 +244,9 @@ Last updated: December 01, 2023.
   <!-- Medium Zoom JS -->
   <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.8/dist/medium-zoom.min.js" integrity="sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8=" crossorigin="anonymous"></script>
   <script defer src="/assets/js/zoom.js"></script>
+  <!-- Sidebar Table of Contents -->
+  <script defer src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+
 
   <!-- Bootstrap Table -->
   <link defer rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.21.3/dist/bootstrap-table.min.css">

@@ -1,5 +1,31 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://mattiapugliatti.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://mattiapugliatti.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-12-01T12:17:02+00:00</updated><id>https://mattiapugliatti.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
-</subtitle><entry><title type="html">The “Milani IP” Dataset</title><link href="https://mattiapugliatti.github.io/blog/2023/milani/" rel="alternate" type="text/html" title="The “Milani IP” Dataset" /><published>2023-05-29T10:00:00+00:00</published><updated>2023-05-29T10:00:00+00:00</updated><id>https://mattiapugliatti.github.io/blog/2023/milani</id><content type="html" xml:base="https://mattiapugliatti.github.io/blog/2023/milani/"><![CDATA[<h2 id="what-is-the-milani-ip-dataset">What is the “Milani IP” Dataset?</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://mattiapugliatti.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://mattiapugliatti.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-12-01T12:39:24+00:00</updated><id>https://mattiapugliatti.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+</subtitle><entry><title type="html">My Ph.D. defense</title><link href="https://mattiapugliatti.github.io/blog/2023/PhDdefense/" rel="alternate" type="text/html" title="My Ph.D. defense" /><published>2023-11-27T10:00:00+00:00</published><updated>2023-11-27T10:00:00+00:00</updated><id>https://mattiapugliatti.github.io/blog/2023/PhDdefense</id><content type="html" xml:base="https://mattiapugliatti.github.io/blog/2023/PhDdefense/"><![CDATA[<h2 id="intro">Intro</h2>
+
+<p>On the 27th of November 2023, I successfully defended my Ph.D. thesis with the title “Data-Driven Image Processing for Enhanced Vision-Based Applications Around Small Bodies With Machine Learning”.</p>
+
+<p>If you would have been interested in attending but you missed it, don’t worry! In this post, I share all the publicly available material about the defense and the manuscript, with the hope that it could be useful for someone else. Enjoy!</p>
+
+<h2 id="abstract">Abstract</h2>
+
+<p>The space sector is undergoing rapid growth, especially in near-Earth orbits, promising unprecedented benefits through integrated space-based services. At the same time, CubeSats are reshaping deep space by diversifying scientific objectives and complementing traditional missions. Profiting from this favorable environment, a surge in deep-space missions dedicated to the exploration and exploitation of the Solar System is on the horizon. Within this context, small celestial bodies, such as asteroids and comets, emerge as intriguing targets due to their abundance, proximity to Earth’s orbit, ancient origins, importance for planetary defense, potential for resource utilization, and the quest for extraterrestrial life. However, the operation of a large fleet of spacecraft exploring these deep space bodies poses critical challenges when approached with the current ground-based paradigm. Driven by the need for real-time decision-making and cost-effective solutions, technological advancements are gearing towards autonomous spacecraft operations. Within this context, artificial intelligence enhancements on computer vision tasks are posed to enrich perception and spatial comprehension of the surrounding environment, enabling intelligent spacecraft to operate effortlessly and autonomously. Image segmentation and visual-based navigation, in particular, are investigated in this manuscript using neural networks and machine learning approaches. Data-driven image processing options are also assessed for the future CubeSat mission Milani, which will visit the Didymos binary system. Milani’s semi-autonomous vision-based capabilities pave the way for adopting data-driven algorithms in deep space. Assessing the performance of these techniques is as important as highlighting their drawbacks and the challenges associated with their development, primarily related to the availability of high-quality training data. The integration of artificial intelligence and autonomous capabilities holds the potential to revolutionize our engagement with minor bodies, shaping the future of space exploration.</p>
+
+<h2 id="usefukl-links">Usefukl links</h2>
+
+<ul>
+  <li>
+    <p>Defense video: <a href="https://drive.google.com/file/d/1LqbR87qLxVOnVJkaNRnpOtmr22fWC5Vj/view?usp=sharing"> here </a></p>
+  </li>
+  <li>
+    <p>Defense slides: <a href="https://drive.google.com/file/d/1mARpjKxvLETxslgYHqYp5j9VPgFi8kA5/view?usp=sharing"> PDF-slides </a></p>
+  </li>
+  <li>
+    <p>Thesis manuscript: <a href="https://hdl.handle.net/10589/213552"> POLItesi </a></p>
+  </li>
+</ul>
+
+<h2 id="acknowledgments">Acknowledgments</h2>
+
+<p>Let me thank the reviewers () and comission member for their work.</p>]]></content><author><name></name></author><category term="PhD" /><category term="data-driven" /><category term="regression" /><category term="segmentation" /><category term="dataset" /><summary type="html"><![CDATA[Brief overview, recording, and presentation of my Ph.D. defense at Politecnico di Milano]]></summary></entry><entry><title type="html">The “Milani IP” Dataset</title><link href="https://mattiapugliatti.github.io/blog/2023/milani/" rel="alternate" type="text/html" title="The “Milani IP” Dataset" /><published>2023-05-29T10:00:00+00:00</published><updated>2023-05-29T10:00:00+00:00</updated><id>https://mattiapugliatti.github.io/blog/2023/milani</id><content type="html" xml:base="https://mattiapugliatti.github.io/blog/2023/milani/"><![CDATA[<h2 id="what-is-the-milani-ip-dataset">What is the “Milani IP” Dataset?</h2>
 
 <p>This dataset contains data used in the work “The image processing of Milani challenges after DART impact”, by Mattia Pugliatti, Carmine Giordano, and Francesco Topputo, ESA-GNC conference, Sopot, Poland, June 2023.</p>
 
