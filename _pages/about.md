@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Politecnico di Milano, DART group 
+subtitle: Ph.D., Politecnico di Milano, DART group 
 
 profile:
   align: right
