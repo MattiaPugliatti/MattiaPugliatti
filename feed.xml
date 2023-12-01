@@ -1,9 +1,33 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://mattiapugliatti.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://mattiapugliatti.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-12-01T12:39:24+00:00</updated><id>https://mattiapugliatti.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://mattiapugliatti.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://mattiapugliatti.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-12-01T12:54:21+00:00</updated><id>https://mattiapugliatti.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 </subtitle><entry><title type="html">My Ph.D. defense</title><link href="https://mattiapugliatti.github.io/blog/2023/PhDdefense/" rel="alternate" type="text/html" title="My Ph.D. defense" /><published>2023-11-27T10:00:00+00:00</published><updated>2023-11-27T10:00:00+00:00</updated><id>https://mattiapugliatti.github.io/blog/2023/PhDdefense</id><content type="html" xml:base="https://mattiapugliatti.github.io/blog/2023/PhDdefense/"><![CDATA[<h2 id="intro">Intro</h2>
 
 <p>On the 27th of November 2023, I successfully defended my Ph.D. thesis with the title “Data-Driven Image Processing for Enhanced Vision-Based Applications Around Small Bodies With Machine Learning”.</p>
 
 <p>If you would have been interested in attending but you missed it, don’t worry! In this post, I share all the publicly available material about the defense and the manuscript, with the hope that it could be useful for someone else. Enjoy!</p>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0 text-center">
+        <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/PhDtheme-480.webp" />
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/PhDtheme-800.webp" />
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/PhDtheme-1400.webp" />
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/PhDtheme.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+<div class="caption">
+    Small bodies and neural networks
+</div>
 
 <h2 id="abstract">Abstract</h2>
 
@@ -25,7 +49,7 @@
 
 <h2 id="acknowledgments">Acknowledgments</h2>
 
-<p>Let me thank the reviewers () and comission member for their work.</p>]]></content><author><name></name></author><category term="PhD" /><category term="data-driven" /><category term="regression" /><category term="segmentation" /><category term="dataset" /><summary type="html"><![CDATA[Brief overview, recording, and presentation of my Ph.D. defense at Politecnico di Milano]]></summary></entry><entry><title type="html">The “Milani IP” Dataset</title><link href="https://mattiapugliatti.github.io/blog/2023/milani/" rel="alternate" type="text/html" title="The “Milani IP” Dataset" /><published>2023-05-29T10:00:00+00:00</published><updated>2023-05-29T10:00:00+00:00</updated><id>https://mattiapugliatti.github.io/blog/2023/milani</id><content type="html" xml:base="https://mattiapugliatti.github.io/blog/2023/milani/"><![CDATA[<h2 id="what-is-the-milani-ip-dataset">What is the “Milani IP” Dataset?</h2>
+<p>Let me thank my supervisor, Prof. Francesco Topputo, the external reviewers (Prof. Jay McMahon and Dr.Svenja Woicke), the PhD defence committee (Prof. Massimiliano Vasile, Dr. Svenja Woicke, and Prof. Fabio Ferrari), and the European Commission for having funded this research as part of the <a href="https://cordis.europa.eu/project/id/813644"> Stardust-R </a>Innovative Training Network.</p>]]></content><author><name></name></author><category term="PhD" /><category term="data-driven" /><category term="regression" /><category term="segmentation" /><category term="dataset" /><summary type="html"><![CDATA[Brief overview, recording, and presentation of my Ph.D. defense at Politecnico di Milano]]></summary></entry><entry><title type="html">The “Milani IP” Dataset</title><link href="https://mattiapugliatti.github.io/blog/2023/milani/" rel="alternate" type="text/html" title="The “Milani IP” Dataset" /><published>2023-05-29T10:00:00+00:00</published><updated>2023-05-29T10:00:00+00:00</updated><id>https://mattiapugliatti.github.io/blog/2023/milani</id><content type="html" xml:base="https://mattiapugliatti.github.io/blog/2023/milani/"><![CDATA[<h2 id="what-is-the-milani-ip-dataset">What is the “Milani IP” Dataset?</h2>
 
 <p>This dataset contains data used in the work “The image processing of Milani challenges after DART impact”, by Mattia Pugliatti, Carmine Giordano, and Francesco Topputo, ESA-GNC conference, Sopot, Poland, June 2023.</p>
 
