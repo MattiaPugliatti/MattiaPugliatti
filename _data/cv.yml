@@ -13,11 +13,12 @@
   contents:
     - title: PhD and Early Stage Researcher
       institution: Politecnico di Milano, Milan, Italy
-      year: Nov. 2019 - Present
+      year: Nov. 2019 - Nov. 2023
       description:
         - Artificial intelligence for enhanced optical navigation techniques around small-bodies.
         - Mission analysis, image processing, and GNC design of the Milani mission. Team leader of the GNC group for the Milani mission.
         - Marie Skłodowska Curie ESR13 of Stardust-R, the European Training Network on asteroids and space debris.
+        - Thesis on Data-Driven Image Processing for Enhanced Vision-Based Applications Around Small Bodies with Machine Learning, cum laude.
     - title: M.Sc. in Spaceflight
       institution: Delft University of Technology Delft, The Netherlands
       year: Sep. 2015 - Mar. 2018
@@ -71,6 +72,14 @@
 - title: Honors and Awards
   type: time_table
   contents:
+    - year: 2023
+      items: 
+        - ASI (Italian Space Agency) Scholarship for 74th IAC and 21st SGC
+        - 5 scholarships provided to Italian researchers to participate to the 74th IAC and 21st SGC in Baku, Azerbaijan.
+    - year: 2023
+      items: 
+        - MDPI travel award 2023
+        - Award to take part in international conferences in the aerospace community in 2024
     - year: 2022
       items: 
         - Progetto Roberto Rocca
