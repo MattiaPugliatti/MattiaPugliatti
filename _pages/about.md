@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: PostDoc fellos, University of Colorado Boulder, ORCCA group 
+subtitle: PostDoc fellow, ORCCA group 
 
 profile:
   align: right
