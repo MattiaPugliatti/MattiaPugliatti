@@ -36,6 +36,12 @@
 - title: Experience
   type: time_table
   contents:
+    - title: PostDoctoral Associate
+      institution: University of Colorado, Boulder, Colorado, United States of America
+      year: Jan. 2024 - Now
+      description:
+        - Lead Scarabaeus development, OD tool for EMA mission.
+        - Artificial intelligence for enhanced optical navigation techniques around small-bodies.
     - title: Visiting researcher
       institution: Deutsches Forschungszentrum für Künstliche Intelligenz (DFKI), Bremen, Germany
       year: Feb. 2023 - May 2023
