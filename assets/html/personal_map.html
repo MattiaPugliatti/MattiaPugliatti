@@ -160,7 +160,7 @@
 <aside>
   <div class="head">
     <h1>Places around the world</h1>
-    <p>Universities, labs and companies around the world where I have worked on spacecraft navigation. Select a pin or a place to see more.</p>
+    <p>Universities, research labs and companies around the world where I have worked. Select a pin or a place to see more.</p>
   </div>
 
   <div class="tools">
@@ -202,38 +202,42 @@ const TYPES = {
 };
 
 const PLACES = [
+  { id: "bologna",   place: "Bologna, Italy",         org: "Nautilus", type: "industry",
+  lat: 43.866674, lng: 11.730780,     
+  summary: "Head of On-Board Systems", missions: [] },
+
   { id: "boulder",  place: "Boulder, USA",          org: "University of Colorado Boulder, CCAR (ORCCA group)", type: "academia",
     lat: 40.0076, lng: -105.2630,
     summary: "Postdoctoral researcher in the Orbital Research Cluster for Celestial Applications, supervised by Prof. Jay McMahon.",
-    missions: [], url: "https://www.colorado.edu/faculty/mcmahon/orcca" },
+    missions: ["EMA"], url: "https://www.colorado.edu/faculty/mcmahon/orcca" },
 
   { id: "tucson",   place: "Tucson, USA",           org: "University of Arizona", type: "academia",
     lat: 32.2319, lng: -110.9501,
-    summary: "Add a few lines about your work here.", missions: [] },
+    summary: "Visiting researcher (during the PhD) to Prof. Roberto Furfaro's lab.", missions: [] },
 
   { id: "bremen",   place: "Bremen, Germany",       org: "DFKI", type: "research",
     lat: 53.1083, lng: 8.8593,
-    summary: "Add a few lines about your work here.", missions: [] },
+    summary: "Visiting researcher (during the PhD) to Shubham Vyas at DFKI", missions: [] },
 
   { id: "madrid",   place: "Madrid, Spain",         org: "GMV", type: "industry",
     lat: 40.6039, lng: -3.7066,
-    summary: "Add a few lines about your work here.", missions: [] },
+    summary: "GNC Engineer at GMV.", missions: ["Hera"] },
 
   { id: "tokyo",    place: "Tokyo area, Japan",     org: "ISAS/JAXA", type: "research",
     lat: 35.5585, lng: 139.3989,
-    summary: "Add a few lines about your work here.", missions: ["EQUULEUS", "DESTINY+"] },
+    summary: "Visiting researcher (during the Master's) to Prof. Yasuhiro Kawakatsu", missions: ["EQUULEUS", "DESTINY+"] },
 
   { id: "friedrichshafen", place: "Friedrichshafen, Germany", org: "Airbus Defence and Space", type: "industry",
     lat: 47.6593, lng: 9.3715,
-    summary: "Add a few lines about your work here.", missions: [] },
+    summary: "Internship (during the Master's)", missions: [] },
 
   { id: "delft",    place: "Delft, Netherlands",    org: "TU Delft", type: "academia",
     lat: 52.0022, lng: 4.3736,
-    summary: "Add a few lines about your work here.", missions: [] },
+    summary: "Master", missions: [] },
 
   { id: "milan",    place: "Milan, Italy",          org: "DART, Politecnico di Milano", type: "academia",
     lat: 45.5011, lng: 9.1561,
-    summary: "My hometown, and where I started in the field.", missions: ["Milani", "HERA"] }
+    summary: "Bachelor and PhD", missions: ["Milani"] }
 ];
 
 /* =====================================================================
@@ -244,20 +248,23 @@ const $ = (s) => document.querySelector(s);
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 const map = L.map("map", { zoomControl: true, worldCopyJump: true, minZoom: 2 });
-const tiles = L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
-  maxZoom: 18,
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+/* ---- Basemap -----------------------------------------------------------
+   CARTO's free basemaps now need an API key, so this uses Esri's keyless
+   "Light Gray Canvas" instead (base layer + a labels layer on top).
+   To use a different provider, only this block needs to change.
+   ------------------------------------------------------------------------ */
+const ESRI = "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/";
+const tiles = L.tileLayer(ESRI + "World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}", {
+  maxZoom: 16,
+  attribution: 'Tiles &copy; Esri &mdash; Esri, HERE, Garmin, &copy; OpenStreetMap contributors'
 }).addTo(map);
+L.tileLayer(ESRI + "World_Light_Gray_Reference/MapServer/tile/{z}/{y}/{x}", { maxZoom: 16 }).addTo(map);
 
 // Tell the visitor why the background is blank instead of failing silently.
-// Map tile servers refuse requests that come from a file:// page (no referrer),
-// so this usually appears when the file is opened by double-clicking it.
 const notice = document.createElement("div");
 notice.className = "tile-notice";
 notice.hidden = true;
-notice.textContent = location.protocol === "file:"
-  ? "The map background cannot load when this file is opened directly from disk. Run a local server (python3 -m http.server) and open http://localhost:8000/map.html instead. Your places are still listed on the left."
-  : "The map background could not load. Check your internet connection. Your places are still listed on the left.";
+notice.textContent = "The map background could not load. Check your internet connection or try again later. Your places are still listed on the left.";
 document.getElementById("map").appendChild(notice);
 let tileErrors = 0;
 tiles.on("tileerror", () => { if (++tileErrors >= 3) notice.hidden = false; });
