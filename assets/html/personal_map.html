@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Places around the world</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,500;0,700;1,400&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --paper: #E9EEF0;
+    --panel: #F7F9F9;
+    --ink: #11284A;
+    --ink-soft: #4A5B78;
+    --rule: #C9D3D8;
+    --industry: #A6422F;
+    --academia: #1F6F78;
+    --research: #B5832A;
+    --focus: #11284A;
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; }
+  body {
+    font-family: "Public Sans", system-ui, sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    height: 100vh;
+    height: 100dvh;
+  }
+
+  /* ---------- Side panel ---------- */
+  aside {
+    background: var(--panel);
+    border-right: 1px solid var(--rule);
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+  .head { padding: 28px 24px 18px; }
+  h1 {
+    font-family: "Spectral", Georgia, serif;
+    font-weight: 700;
+    font-size: 1.75rem;
+    line-height: 1.15;
+    margin: 0 0 8px;
+  }
+  .head p { margin: 0; color: var(--ink-soft); font-size: .92rem; line-height: 1.5; }
+
+  .tools { padding: 0 24px 16px; border-bottom: 1px solid var(--rule); }
+  .search {
+    width: 100%;
+    padding: 10px 12px;
+    font: inherit;
+    font-size: .92rem;
+    color: var(--ink);
+    background: #fff;
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+  }
+  .search:focus-visible, button:focus-visible, a:focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 2px;
+  }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+  .chip {
+    --c: var(--ink);
+    display: inline-flex; align-items: center; gap: 7px;
+    font: inherit; font-size: .82rem; font-weight: 500;
+    padding: 6px 11px;
+    color: var(--ink);
+    background: #fff;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    cursor: pointer;
+  }
+  .chip::before {
+    content: ""; width: 10px; height: 10px; border-radius: 50%;
+    background: var(--c);
+  }
+  .chip[aria-pressed="false"] { color: var(--ink-soft); background: transparent; }
+  .chip[aria-pressed="false"]::before { background: transparent; box-shadow: inset 0 0 0 1.5px var(--c); }
+  .chip .n { color: var(--ink-soft); font-weight: 400; }
+
+  .count { padding: 12px 24px 4px; font-size: .8rem; color: var(--ink-soft); display: flex; justify-content: space-between; align-items: center; }
+  .linkbtn { font: inherit; font-size: .8rem; color: var(--ink); background: none; border: 0; padding: 0; text-decoration: underline; cursor: pointer; }
+
+  ul.list { list-style: none; margin: 0; padding: 4px 12px 24px; overflow-y: auto; flex: 1; }
+  .item {
+    --c: var(--ink);
+    display: block; width: 100%; text-align: left;
+    font: inherit; color: inherit;
+    background: transparent;
+    border: 0;
+    border-left: 4px solid var(--c);
+    border-radius: 0 6px 6px 0;
+    padding: 10px 12px 10px 14px;
+    margin: 4px 0;
+    cursor: pointer;
+  }
+  .item:hover { background: #fff; }
+  .item[aria-current="true"] { background: #fff; box-shadow: 0 0 0 1px var(--rule); }
+  .item .place { font-weight: 600; font-size: .98rem; }
+  .item .org { font-size: .85rem; color: var(--ink-soft); margin-top: 2px; }
+  .empty { padding: 24px; color: var(--ink-soft); font-size: .9rem; line-height: 1.5; }
+
+  /* ---------- Map ---------- */
+  #map { height: 100%; width: 100%; background: var(--paper); }
+  .pin {
+    --c: var(--ink);
+    width: 20px; height: 20px; border-radius: 50%;
+    background: var(--c);
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 1.5px var(--c), 0 2px 6px rgba(17,40,74,.35);
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .pin.sel { transform: scale(1.4); box-shadow: 0 0 0 2px var(--c), 0 0 0 8px rgba(17,40,74,.14); }
+
+  .tile-notice {
+    position: absolute; z-index: 1000; left: 50%; top: 14px; transform: translateX(-50%);
+    max-width: min(92%, 520px); padding: 10px 14px;
+    background: #fff; color: var(--ink); border: 1px solid var(--rule); border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(17,40,74,.2); font-size: .85rem; line-height: 1.45;
+  }
+  .tile-notice[hidden] { display: none; }
+
+  .leaflet-popup-content-wrapper { border-radius: 8px; color: var(--ink); }
+  .leaflet-popup-content { margin: 14px 16px; font-family: "Public Sans", sans-serif; font-size: .88rem; line-height: 1.5; min-width: 220px; }
+  .pop-place { font-family: "Spectral", Georgia, serif; font-weight: 700; font-size: 1.2rem; line-height: 1.2; }
+  .pop-org { color: var(--ink-soft); margin: 2px 0 8px; }
+  .pop-tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0 0; padding: 0; list-style: none; }
+  .pop-tags li { font-size: .75rem; padding: 2px 8px; border: 1px solid var(--rule); border-radius: 999px; }
+  .pop-link { display: inline-block; margin-top: 10px; color: var(--ink); font-weight: 600; }
+
+  /* ---------- Mobile ---------- */
+  @media (max-width: 760px) {
+    body { grid-template-columns: 1fr; grid-template-rows: 55% 45%; }
+    #map { order: -1; }
+    aside { border-right: 0; border-top: 1px solid var(--rule); }
+    .head { padding: 16px 16px 10px; }
+    h1 { font-size: 1.35rem; }
+    .head p { display: none; }
+    .tools { padding: 0 16px 12px; }
+    .count { padding: 10px 16px 2px; }
+    ul.list { padding: 4px 8px 16px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .pin { transition: none; }
+  }
+</style>
+</head>
+
+<body>
+
+<aside>
+  <div class="head">
+    <h1>Places around the world</h1>
+    <p>Universities, labs and companies around the world where I have worked on spacecraft navigation. Select a pin or a place to see more.</p>
+  </div>
+
+  <div class="tools">
+    <label for="q" class="sr" style="position:absolute;left:-9999px">Search places</label>
+    <input id="q" class="search" type="search" placeholder="Search by place, organisation or mission" autocomplete="off">
+    <div class="chips" id="chips" role="group" aria-label="Filter by type"></div>
+  </div>
+
+  <div class="count">
+    <span id="count" aria-live="polite"></span>
+    <button class="linkbtn" id="fit" type="button">Show all on map</button>
+  </div>
+
+  <ul class="list" id="list"></ul>
+</aside>
+
+<div id="map" role="application" aria-label="Interactive map"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+/* =====================================================================
+   1. YOUR DATA — this is the only part you need to edit.
+   One object per place. Add, remove or reorder freely.
+
+   id        short unique name, used in the URL (map.html#delft)
+   place     city shown as the title
+   org       organisation or group
+   type      one of the keys in TYPES below
+   lat, lng  coordinates (right-click a spot in Google Maps to copy them)
+   summary   a few sentences about what you did there
+   missions  optional list of missions or projects (shown as tags)
+   url       optional link (lab page, project page, paper...)
+   ===================================================================== */
+
+const TYPES = {
+  industry: { label: "Industry",  color: "#A6422F" },
+  academia: { label: "University", color: "#1F6F78" },
+  research: { label: "Research institute", color: "#B5832A" }
+};
+
+const PLACES = [
+  { id: "boulder",  place: "Boulder, USA",          org: "University of Colorado Boulder, CCAR (ORCCA group)", type: "academia",
+    lat: 40.0076, lng: -105.2630,
+    summary: "Postdoctoral researcher in the Orbital Research Cluster for Celestial Applications, supervised by Prof. Jay McMahon.",
+    missions: [], url: "https://www.colorado.edu/faculty/mcmahon/orcca" },
+
+  { id: "tucson",   place: "Tucson, USA",           org: "University of Arizona", type: "academia",
+    lat: 32.2319, lng: -110.9501,
+    summary: "Add a few lines about your work here.", missions: [] },
+
+  { id: "bremen",   place: "Bremen, Germany",       org: "DFKI", type: "research",
+    lat: 53.1083, lng: 8.8593,
+    summary: "Add a few lines about your work here.", missions: [] },
+
+  { id: "madrid",   place: "Madrid, Spain",         org: "GMV", type: "industry",
+    lat: 40.6039, lng: -3.7066,
+    summary: "Add a few lines about your work here.", missions: [] },
+
+  { id: "tokyo",    place: "Tokyo area, Japan",     org: "ISAS/JAXA", type: "research",
+    lat: 35.5585, lng: 139.3989,
+    summary: "Add a few lines about your work here.", missions: ["EQUULEUS", "DESTINY+"] },
+
+  { id: "friedrichshafen", place: "Friedrichshafen, Germany", org: "Airbus Defence and Space", type: "industry",
+    lat: 47.6593, lng: 9.3715,
+    summary: "Add a few lines about your work here.", missions: [] },
+
+  { id: "delft",    place: "Delft, Netherlands",    org: "TU Delft", type: "academia",
+    lat: 52.0022, lng: 4.3736,
+    summary: "Add a few lines about your work here.", missions: [] },
+
+  { id: "milan",    place: "Milan, Italy",          org: "DART, Politecnico di Milano", type: "academia",
+    lat: 45.5011, lng: 9.1561,
+    summary: "My hometown, and where I started in the field.", missions: ["Milani", "HERA"] }
+];
+
+/* =====================================================================
+   2. MAP LOGIC — no need to edit below this line.
+   ===================================================================== */
+
+const $ = (s) => document.querySelector(s);
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+const map = L.map("map", { zoomControl: true, worldCopyJump: true, minZoom: 2 });
+const tiles = L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
+  maxZoom: 18,
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+}).addTo(map);
+
+// Tell the visitor why the background is blank instead of failing silently.
+// Map tile servers refuse requests that come from a file:// page (no referrer),
+// so this usually appears when the file is opened by double-clicking it.
+const notice = document.createElement("div");
+notice.className = "tile-notice";
+notice.hidden = true;
+notice.textContent = location.protocol === "file:"
+  ? "The map background cannot load when this file is opened directly from disk. Run a local server (python3 -m http.server) and open http://localhost:8000/map.html instead. Your places are still listed on the left."
+  : "The map background could not load. Check your internet connection. Your places are still listed on the left.";
+document.getElementById("map").appendChild(notice);
+let tileErrors = 0;
+tiles.on("tileerror", () => { if (++tileErrors >= 3) notice.hidden = false; });
+tiles.on("tileload", () => { tileErrors = 0; notice.hidden = true; });
+
+const state = { query: "", active: new Set(Object.keys(TYPES)), selected: null };
+const markers = new Map();
+
+function popupFor(p) {
+  const el = document.createElement("div");
+  const add = (tag, cls, text) => {
+    const n = document.createElement(tag);
+    if (cls) n.className = cls;
+    n.textContent = text;
+    el.appendChild(n);
+    return n;
+  };
+  add("div", "pop-place", p.place);
+  add("div", "pop-org", p.org);
+  add("div", "", p.summary);
+  if (p.missions && p.missions.length) {
+    const ul = document.createElement("ul");
+    ul.className = "pop-tags";
+    p.missions.forEach((m) => { const li = document.createElement("li"); li.textContent = m; ul.appendChild(li); });
+    el.appendChild(ul);
+  }
+  if (p.url) {
+    const a = document.createElement("a");
+    a.className = "pop-link"; a.href = p.url; a.target = "_blank"; a.rel = "noopener";
+    a.textContent = "Learn more";
+    el.appendChild(a);
+  }
+  return el;
+}
+
+PLACES.forEach((p) => {
+  const icon = L.divIcon({
+    className: "",
+    html: `<div class="pin" style="--c:${TYPES[p.type].color}"></div>`,
+    iconSize: [20, 20], iconAnchor: [10, 10], popupAnchor: [0, -12]
+  });
+  const m = L.marker([p.lat, p.lng], { icon, title: `${p.place} – ${p.org}`, keyboard: true });
+  m.bindPopup(() => popupFor(p), { closeButton: true });
+  m.on("click", () => select(p.id, false));
+  m.on("popupclose", () => { if (state.selected === p.id) select(null); });
+  markers.set(p.id, m);
+});
+
+function matches(p) {
+  if (!state.active.has(p.type)) return false;
+  const q = state.query.trim().toLowerCase();
+  if (!q) return true;
+  return [p.place, p.org, p.summary, (p.missions || []).join(" "), TYPES[p.type].label]
+    .join(" ").toLowerCase().includes(q);
+}
+
+function render() {
+  const visible = PLACES.filter(matches);
+
+  // markers
+  PLACES.forEach((p) => {
+    const m = markers.get(p.id);
+    if (matches(p)) m.addTo(map); else map.removeLayer(m);
+  });
+
+  // list
+  const list = $("#list");
+  list.innerHTML = "";
+  if (!visible.length) {
+    const li = document.createElement("li");
+    li.className = "empty";
+    li.textContent = "No places match. Clear the search or turn a filter back on.";
+    list.appendChild(li);
+  }
+  visible.forEach((p) => {
+    const li = document.createElement("li");
+    const b = document.createElement("button");
+    b.type = "button";
+    b.className = "item";
+    b.style.setProperty("--c", TYPES[p.type].color);
+    if (state.selected === p.id) b.setAttribute("aria-current", "true");
+    b.innerHTML = '<div class="place"></div><div class="org"></div>';
+    b.querySelector(".place").textContent = p.place;
+    b.querySelector(".org").textContent = p.org;
+    b.addEventListener("click", () => select(p.id, true));
+    li.appendChild(b);
+    list.appendChild(li);
+  });
+
+  $("#count").textContent = `${visible.length} of ${PLACES.length} places`;
+
+  // chip counts
+  document.querySelectorAll(".chip").forEach((c) => {
+    c.setAttribute("aria-pressed", String(state.active.has(c.dataset.type)));
+  });
+
+  // selected pin styling
+  document.querySelectorAll(".pin").forEach((el) => el.classList.remove("sel"));
+  if (state.selected && markers.has(state.selected)) {
+    const el = markers.get(state.selected).getElement();
+    if (el) el.querySelector(".pin").classList.add("sel");
+  }
+}
+
+function select(id, fly) {
+  state.selected = id;
+  if (id) {
+    const p = PLACES.find((x) => x.id === id);
+    const m = markers.get(id);
+    if (!matches(p)) { state.query = ""; $("#q").value = ""; state.active.add(p.type); }
+    if (fly) {
+      const zoom = Math.max(map.getZoom(), 6);
+      if (reduceMotion) map.setView([p.lat, p.lng], zoom);
+      else map.flyTo([p.lat, p.lng], zoom, { duration: 1.1 });
+    }
+    render();
+    m.openPopup();
+    history.replaceState(null, "", "#" + id);
+  } else {
+    history.replaceState(null, "", location.pathname + location.search);
+    render();
+  }
+}
+
+function fitAll() {
+  const vis = PLACES.filter(matches);
+  if (!vis.length) return;
+  map.fitBounds(L.latLngBounds(vis.map((p) => [p.lat, p.lng])), { padding: [60, 60], maxZoom: 5 });
+}
+
+// filter chips
+const chips = $("#chips");
+Object.entries(TYPES).forEach(([key, t]) => {
+  const n = PLACES.filter((p) => p.type === key).length;
+  if (!n) return;
+  const b = document.createElement("button");
+  b.type = "button";
+  b.className = "chip";
+  b.dataset.type = key;
+  b.style.setProperty("--c", t.color);
+  b.setAttribute("aria-pressed", "true");
+  b.innerHTML = `${t.label} <span class="n">${n}</span>`;
+  b.addEventListener("click", () => {
+    state.active.has(key) ? state.active.delete(key) : state.active.add(key);
+    render();
+  });
+  chips.appendChild(b);
+});
+
+$("#q").addEventListener("input", (e) => { state.query = e.target.value; render(); });
+$("#fit").addEventListener("click", () => { map.closePopup(); fitAll(); });
+
+// start
+render();
+const startId = location.hash.slice(1);
+if (startId && markers.has(startId)) {
+  const p = PLACES.find((x) => x.id === startId);
+  map.setView([p.lat, p.lng], 6);
+  select(startId, false);
+} else {
+  fitAll();
+}
+</script>
+</body>
+</html>
